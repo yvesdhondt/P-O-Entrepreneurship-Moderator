@@ -85,7 +85,7 @@
             this.Controls.Add(this.txtRemoveWord);
             this.Controls.Add(this.blacklistListView);
             this.Name = "BlacklistClusterForm";
-            this.Text = "BlacklistClusterForm";
+            this.Text = "Blacklist";
             this.Load += new System.EventHandler(this.BlacklistClusterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

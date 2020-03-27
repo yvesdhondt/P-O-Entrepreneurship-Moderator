@@ -30,7 +30,7 @@ namespace peno_cluster_moderator
 
         }
 
-        private void btnReportedQA_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -43,6 +43,24 @@ namespace peno_cluster_moderator
             BlacklistClusterForm blacklistForm = new BlacklistClusterForm(ModeratorPanel.GetBlackList());
             blacklistForm.AddListener(BlackListListener);
             blacklistForm.Show();
+        }
+
+        private void btnReportedQA_Click(object sender, EventArgs e)
+        {
+            ReportedClusterForm reportedForm = new ReportedClusterForm();
+            reportedForm.Show();
+        }
+
+        private void btnFlaggedQA_Click(object sender, EventArgs e)
+        {
+            FlaggedClusterForm flaggedForm = new FlaggedClusterForm();
+            flaggedForm.Show();
+        }
+
+        private void btnBlockedUsers_Click(object sender, EventArgs e)
+        {
+            BlockedClusterForm blockedForm = new BlockedClusterForm();
+            blockedForm.Show();
         }
     }
 }
