@@ -36,6 +36,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "BlockedClusterForm";
             this.Text = "Blocked Users";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlockedClusterForm_FormClosing);
+            this.Load += new System.EventHandler(this.BlockedClusterForm_Load);
             this.ResumeLayout(false);
 
         }

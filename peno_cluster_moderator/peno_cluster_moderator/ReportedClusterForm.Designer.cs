@@ -36,6 +36,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "ReportedClusterForm";
             this.Text = "Reported Q&A";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportedClusterForm_FormClosing);
+            this.Load += new System.EventHandler(this.ReportedClusterForm_Load);
             this.ResumeLayout(false);
 
         }

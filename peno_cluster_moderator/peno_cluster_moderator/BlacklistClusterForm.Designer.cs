@@ -112,6 +112,7 @@
             this.Controls.Add(this.blacklistListView);
             this.Name = "BlacklistClusterForm";
             this.Text = "Blacklist";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BlacklistClusterForm_FormClosing);
             this.Load += new System.EventHandler(this.BlacklistClusterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

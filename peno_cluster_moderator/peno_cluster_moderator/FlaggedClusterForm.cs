@@ -8,11 +8,24 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
-    public partial class FlaggedClusterForm : peno_cluster_moderator.ClusterForm
+    public partial class FlaggedClusterForm : ClusterForm
     {
-        public FlaggedClusterForm()
+        public FlaggedClusterForm(ClusterForm creator)
         {
             InitializeComponent();
+
+            // Set the creator
+            this.Creator = creator;
+        }
+
+        private void FlaggedClusterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FlaggedClusterForm_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            base.ShowCreator();
         }
     }
 }

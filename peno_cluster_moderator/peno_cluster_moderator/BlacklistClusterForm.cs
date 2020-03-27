@@ -13,14 +13,17 @@ namespace peno_cluster_moderator
     /// <summary>
     /// A class displaying the blacklist for the moderator.
     /// </summary>
-    public partial class BlacklistClusterForm : peno_cluster_moderator.ClusterForm
+    public partial class BlacklistClusterForm : ClusterForm
     {
         private readonly List<IBlackListListener> BlackListListeners =
             new List<IBlackListListener>();
 
-        public BlacklistClusterForm(List<string> blacklist)
+        public BlacklistClusterForm(List<string> blacklist, ClusterForm creator)
         {
             InitializeComponent();
+
+            // Set the creator
+            this.Creator = creator;
 
             // Get the list view
             blacklistListView.View = View.Details;
@@ -36,6 +39,11 @@ namespace peno_cluster_moderator
         private void BlacklistClusterForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BlacklistClusterForm_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            base.ShowCreator();
         }
 
         /// <summary>

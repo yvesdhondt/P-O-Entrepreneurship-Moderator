@@ -36,6 +36,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FlaggedClusterForm";
             this.Text = "Flagged Q&A";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FlaggedClusterForm_FormClosing);
+            this.Load += new System.EventHandler(this.FlaggedClusterForm_Load);
             this.ResumeLayout(false);
 
         }
