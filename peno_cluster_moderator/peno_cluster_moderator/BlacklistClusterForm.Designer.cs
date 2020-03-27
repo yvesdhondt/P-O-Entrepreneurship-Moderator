@@ -32,6 +32,8 @@
             this.offensiveWords = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtRemoveWord = new System.Windows.Forms.TextBox();
             this.btnRemoveWord = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtAddWord = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // blacklistListView
@@ -76,11 +78,35 @@
             this.btnRemoveWord.UseVisualStyleBackColor = true;
             this.btnRemoveWord.Click += new System.EventHandler(this.btnRemoveWord_Click);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(193, 46);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(116, 28);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // txtAddWord
+            // 
+            this.txtAddWord.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddWord.Location = new System.Drawing.Point(315, 46);
+            this.txtAddWord.Multiline = true;
+            this.txtAddWord.Name = "txtAddWord";
+            this.txtAddWord.Size = new System.Drawing.Size(473, 28);
+            this.txtAddWord.TabIndex = 3;
+            // 
             // BlacklistClusterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtAddWord);
             this.Controls.Add(this.btnRemoveWord);
             this.Controls.Add(this.txtRemoveWord);
             this.Controls.Add(this.blacklistListView);
@@ -98,5 +124,7 @@
         private System.Windows.Forms.ColumnHeader offensiveWords;
         private System.Windows.Forms.TextBox txtRemoveWord;
         private System.Windows.Forms.Button btnRemoveWord;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtAddWord;
     }
 }

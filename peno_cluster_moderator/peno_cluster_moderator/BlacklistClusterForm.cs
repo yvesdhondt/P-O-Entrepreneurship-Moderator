@@ -24,8 +24,8 @@ namespace peno_cluster_moderator
 
             // Get the list view
             blacklistListView.View = View.Details;
-            // Add the blacklist to the list view
-            foreach (string word in blacklist)
+            // Add the blacklist to the list view, duplicates are only shown once
+            foreach (string word in blacklist.Distinct())
             {
                 blacklistListView.Items.Add(new ListViewItem(new string[] { word }));
             }
@@ -93,6 +93,33 @@ namespace peno_cluster_moderator
                 {
                     this.blacklistListView.Items.Remove(item);
                 }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            // Get the word in the "add" textbox
+            string addedWord = this.txtAddWord.Text;
+
+            // Notify all the listeners
+            foreach (IBlackListListener listener in this.BlackListListeners)
+            {
+                listener.AddEvent(addedWord);
+            }
+
+            // Add the word to the listview if it is not already in it
+            bool inListView = false;
+            foreach (ListViewItem item in this.blacklistListView.Items)
+            {
+                if (item.Text == addedWord)
+                {
+                    inListView = true;
+                    break;
+                }
+            }
+            if (! inListView)
+            {
+                this.blacklistListView.Items.Add(new ListViewItem(new string[] { addedWord }));
             }
         }
     }

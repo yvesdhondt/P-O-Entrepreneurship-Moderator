@@ -30,11 +30,6 @@ namespace peno_cluster_moderator
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// Clicking on the Blacklist button pops-up a new window with the black list
         /// </summary>
@@ -61,11 +56,6 @@ namespace peno_cluster_moderator
         {
             BlockedClusterForm blockedForm = new BlockedClusterForm();
             blockedForm.Show();
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

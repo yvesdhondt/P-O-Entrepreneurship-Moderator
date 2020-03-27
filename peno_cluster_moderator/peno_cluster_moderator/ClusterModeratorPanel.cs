@@ -14,10 +14,9 @@ namespace peno_cluster_moderator
         public ClusterModeratorPanel()
         {
             this.BlackList = new List<string> { "Lindseytje", "Peter Pompoen", "Sjareltje",
-                "Kimchiwinchi", "FooBar", "BarFoo", "Peter Pompoen", "Sjareltje", "Kimchiwinchi",
-                "FooBar", "BarFoo", "Peter Pompoen", "Sjareltje", "Kimchiwinchi", "FooBar", "BarFoo",
-                "Peter Pompoen", "Sjareltje", "Kimchiwinchi", "FooBar", "BarFoo", "Peter Pompoen",
-                "Sjareltje", "Kimchiwinchi", "FooBar", "BarFoo" };
+                "Kimchiwinchi", "FooBar", "BarFoo", "cacatoo", "Gandalf", "Lill' Ernie",
+                "Big Debby", "Debby the Canonball", "Carlalita", "Frodo", "Gremlin", "Shwoof",
+                "godverdomme", "kutwouten", "Arschloch", "Asshole", "Cunty McCuntface", "Sir Cuntalot"};
         }
 
         private List<string> BlackList { get; set; }
