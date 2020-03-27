@@ -19,3 +19,4 @@ D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_modera
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.exe
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.pdb
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.ClusterForm.resources
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.MainForm.resources

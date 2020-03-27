@@ -16,5 +16,10 @@ namespace peno_cluster_moderator
         {
             InitializeComponent();
         }
+
+        private void ClusterForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

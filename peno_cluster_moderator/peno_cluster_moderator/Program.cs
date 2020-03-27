@@ -14,9 +14,12 @@ namespace peno_cluster_moderator
         [STAThread]
         static void Main()
         {
+            // Create a moderator panel
+            var moderatorPanel = new ClusterModeratorPanel();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ClusterForm());
+            Application.Run(new MainForm(moderatorPanel));
         }
     }
 }
