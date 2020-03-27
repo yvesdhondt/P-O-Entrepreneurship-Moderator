@@ -52,6 +52,7 @@
     <Compile Include="BlacklistClusterForm.Designer.cs">
       <DependentUpon>BlacklistClusterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BlackListListener.cs" />
     <Compile Include="ClusterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,7 @@
       <DependentUpon>ClusterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ClusterModeratorPanel.cs" />
+    <Compile Include="IBlackListListener.cs" />
     <Compile Include="IModeratorPanel.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>

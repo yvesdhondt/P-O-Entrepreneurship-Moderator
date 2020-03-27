@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A class displaying the main menu for the moderator.
+    /// </summary>
     public partial class MainForm : peno_cluster_moderator.ClusterForm
     {
         private IModeratorPanel ModeratorPanel { get; set; }
+        private IBlackListListener BlackListListener { get; set; }
 
         public MainForm(IModeratorPanel moderatorPanel)
         {
             InitializeComponent();
             this.ModeratorPanel = moderatorPanel;
+            this.BlackListListener = new BlackListListener(moderatorPanel);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -36,6 +41,7 @@ namespace peno_cluster_moderator
         private void btnBlacklist_Click(object sender, EventArgs e)
         {
             BlacklistClusterForm blacklistForm = new BlacklistClusterForm(ModeratorPanel.GetBlackList());
+            blacklistForm.AddListener(BlackListListener);
             blacklistForm.Show();
         }
     }

@@ -34,7 +34,8 @@
             // 
             // btnReportedQA
             // 
-            this.btnReportedQA.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportedQA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReportedQA.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportedQA.Location = new System.Drawing.Point(0, 61);
             this.btnReportedQA.Name = "btnReportedQA";
             this.btnReportedQA.Size = new System.Drawing.Size(124, 28);
@@ -46,7 +47,8 @@
             // 
             // btnBlacklist
             // 
-            this.btnBlacklist.Font = new System.Drawing.Font("Tw Cen MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlacklist.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBlacklist.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBlacklist.Location = new System.Drawing.Point(0, 27);
             this.btnBlacklist.Name = "btnBlacklist";
             this.btnBlacklist.Size = new System.Drawing.Size(124, 28);
