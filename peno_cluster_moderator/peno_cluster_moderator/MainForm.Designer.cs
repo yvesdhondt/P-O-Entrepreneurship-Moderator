@@ -39,9 +39,10 @@
             // 
             this.btnReportedQA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportedQA.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportedQA.Location = new System.Drawing.Point(0, 26);
+            this.btnReportedQA.Location = new System.Drawing.Point(0, 50);
+            this.btnReportedQA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnReportedQA.Name = "btnReportedQA";
-            this.btnReportedQA.Size = new System.Drawing.Size(124, 28);
+            this.btnReportedQA.Size = new System.Drawing.Size(248, 54);
             this.btnReportedQA.TabIndex = 2;
             this.btnReportedQA.Text = "Reported Q&&A";
             this.btnReportedQA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -53,8 +54,9 @@
             this.btnBlacklist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBlacklist.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBlacklist.Location = new System.Drawing.Point(0, 0);
+            this.btnBlacklist.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBlacklist.Name = "btnBlacklist";
-            this.btnBlacklist.Size = new System.Drawing.Size(124, 28);
+            this.btnBlacklist.Size = new System.Drawing.Size(248, 54);
             this.btnBlacklist.TabIndex = 1;
             this.btnBlacklist.Text = "Blacklist";
             this.btnBlacklist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -65,9 +67,10 @@
             // 
             this.btnFlaggedQA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFlaggedQA.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlaggedQA.Location = new System.Drawing.Point(0, 52);
+            this.btnFlaggedQA.Location = new System.Drawing.Point(0, 100);
+            this.btnFlaggedQA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnFlaggedQA.Name = "btnFlaggedQA";
-            this.btnFlaggedQA.Size = new System.Drawing.Size(124, 28);
+            this.btnFlaggedQA.Size = new System.Drawing.Size(248, 54);
             this.btnFlaggedQA.TabIndex = 3;
             this.btnFlaggedQA.Text = "Flagged Q&&A";
             this.btnFlaggedQA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,9 +81,10 @@
             // 
             this.btnBlockedUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBlockedUsers.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 78);
+            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 150);
+            this.btnBlockedUsers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnBlockedUsers.Name = "btnBlockedUsers";
-            this.btnBlockedUsers.Size = new System.Drawing.Size(124, 28);
+            this.btnBlockedUsers.Size = new System.Drawing.Size(248, 54);
             this.btnBlockedUsers.TabIndex = 4;
             this.btnBlockedUsers.Text = "Blocked Users";
             this.btnBlockedUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -89,16 +93,18 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(835, 591);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1580, 1137);
             this.Controls.Add(this.btnBlockedUsers);
             this.Controls.Add(this.btnFlaggedQA);
             this.Controls.Add(this.btnReportedQA);
             this.Controls.Add(this.btnBlacklist);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Cluster Moderator Panel";
