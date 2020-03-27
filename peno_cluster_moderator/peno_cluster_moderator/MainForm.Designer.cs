@@ -31,10 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnReportedQA = new System.Windows.Forms.Button();
             this.btnBlacklist = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnFlaggedQA = new System.Windows.Forms.Button();
             this.btnBlockedUsers = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReportedQA
@@ -62,18 +60,6 @@
             this.btnBlacklist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBlacklist.UseVisualStyleBackColor = true;
             this.btnBlacklist.Click += new System.EventHandler(this.btnBlacklist_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnBlockedUsers);
-            this.panel1.Controls.Add(this.btnFlaggedQA);
-            this.panel1.Controls.Add(this.btnBlacklist);
-            this.panel1.Controls.Add(this.btnReportedQA);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(124, 607);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnFlaggedQA
             // 
@@ -107,14 +93,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(835, 591);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnBlockedUsers);
+            this.Controls.Add(this.btnFlaggedQA);
+            this.Controls.Add(this.btnReportedQA);
+            this.Controls.Add(this.btnBlacklist);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Cluster Moderator Panel";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -122,7 +110,6 @@
         #endregion
         private System.Windows.Forms.Button btnReportedQA;
         private System.Windows.Forms.Button btnBlacklist;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnFlaggedQA;
         private System.Windows.Forms.Button btnBlockedUsers;
     }

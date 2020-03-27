@@ -62,5 +62,10 @@ namespace peno_cluster_moderator
             BlockedClusterForm blockedForm = new BlockedClusterForm();
             blockedForm.Show();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
