@@ -34,21 +34,23 @@
             this.btnFlaggedQA = new System.Windows.Forms.Button();
             this.btnBlockedUsers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlProfilePicture = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReportedQA
             // 
-            this.btnReportedQA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btnReportedQA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnReportedQA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportedQA.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnReportedQA.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnReportedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnReportedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnReportedQA.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnReportedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnReportedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnReportedQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportedQA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReportedQA.Location = new System.Drawing.Point(0, 26);
+            this.btnReportedQA.Location = new System.Drawing.Point(0, 76);
             this.btnReportedQA.Name = "btnReportedQA";
             this.btnReportedQA.Size = new System.Drawing.Size(210, 28);
             this.btnReportedQA.TabIndex = 2;
@@ -60,16 +62,16 @@
             // 
             // btnBlacklist
             // 
-            this.btnBlacklist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btnBlacklist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnBlacklist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBlacklist.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBlacklist.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnBlacklist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnBlacklist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlacklist.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlacklist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlacklist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlacklist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBlacklist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBlacklist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBlacklist.Location = new System.Drawing.Point(0, 0);
+            this.btnBlacklist.Location = new System.Drawing.Point(0, 50);
             this.btnBlacklist.Name = "btnBlacklist";
             this.btnBlacklist.Size = new System.Drawing.Size(210, 28);
             this.btnBlacklist.TabIndex = 1;
@@ -81,16 +83,16 @@
             // 
             // btnFlaggedQA
             // 
-            this.btnFlaggedQA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btnFlaggedQA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnFlaggedQA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFlaggedQA.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnFlaggedQA.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnFlaggedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnFlaggedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnFlaggedQA.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnFlaggedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnFlaggedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnFlaggedQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFlaggedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFlaggedQA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFlaggedQA.Location = new System.Drawing.Point(0, 52);
+            this.btnFlaggedQA.Location = new System.Drawing.Point(0, 102);
             this.btnFlaggedQA.Name = "btnFlaggedQA";
             this.btnFlaggedQA.Size = new System.Drawing.Size(210, 28);
             this.btnFlaggedQA.TabIndex = 3;
@@ -102,16 +104,16 @@
             // 
             // btnBlockedUsers
             // 
-            this.btnBlockedUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.btnBlockedUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnBlockedUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBlockedUsers.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBlockedUsers.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnBlockedUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnBlockedUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlockedUsers.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlockedUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnBlockedUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlockedUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBlockedUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBlockedUsers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 78);
+            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 128);
             this.btnBlockedUsers.Name = "btnBlockedUsers";
             this.btnBlockedUsers.Size = new System.Drawing.Size(210, 28);
             this.btnBlockedUsers.TabIndex = 4;
@@ -123,7 +125,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Controls.Add(this.pnlProfilePicture);
             this.panel1.Controls.Add(this.btnBlacklist);
             this.panel1.Controls.Add(this.btnReportedQA);
             this.panel1.Controls.Add(this.btnBlockedUsers);
@@ -132,6 +136,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 580);
             this.panel1.TabIndex = 5;
+            // 
+            // pnlProfilePicture
+            // 
+            this.pnlProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlProfilePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlProfilePicture.BackgroundImage")));
+            this.pnlProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlProfilePicture.Location = new System.Drawing.Point(3, 3);
+            this.pnlProfilePicture.Name = "pnlProfilePicture";
+            this.pnlProfilePicture.Size = new System.Drawing.Size(44, 47);
+            this.pnlProfilePicture.TabIndex = 6;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblUserName.Location = new System.Drawing.Point(49, 12);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(147, 25);
+            this.lblUserName.TabIndex = 6;
+            this.lblUserName.Text = "Hans Adminson";
             // 
             // MainForm
             // 
@@ -149,6 +175,7 @@
             this.Text = "Cluster Moderator Panel";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -159,5 +186,7 @@
         private System.Windows.Forms.Button btnFlaggedQA;
         private System.Windows.Forms.Button btnBlockedUsers;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlProfilePicture;
+        private System.Windows.Forms.Label lblUserName;
     }
 }
