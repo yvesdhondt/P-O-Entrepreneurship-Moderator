@@ -38,20 +38,30 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAdd.Location = new System.Drawing.Point(189, 42);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(116, 28);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtAddWord
             // 
-            this.txtAddWord.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtAddWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddWord.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtAddWord.Location = new System.Drawing.Point(311, 42);
             this.txtAddWord.Multiline = true;
             this.txtAddWord.Name = "txtAddWord";
@@ -61,20 +71,30 @@
             // 
             // btnRemoveWord
             // 
+            this.btnRemoveWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
             this.btnRemoveWord.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemoveWord.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveWord.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoveWord.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnRemoveWord.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnRemoveWord.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnRemoveWord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemoveWord.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRemoveWord.Location = new System.Drawing.Point(189, 8);
             this.btnRemoveWord.Name = "btnRemoveWord";
             this.btnRemoveWord.Size = new System.Drawing.Size(116, 28);
             this.btnRemoveWord.TabIndex = 7;
             this.btnRemoveWord.Text = "Remove";
             this.btnRemoveWord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoveWord.UseVisualStyleBackColor = true;
+            this.btnRemoveWord.UseVisualStyleBackColor = false;
             this.btnRemoveWord.Click += new System.EventHandler(this.btnRemoveWord_Click);
             // 
             // txtRemoveWord
             // 
-            this.txtRemoveWord.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemoveWord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtRemoveWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtRemoveWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemoveWord.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtRemoveWord.Location = new System.Drawing.Point(311, 8);
             this.txtRemoveWord.Multiline = true;
             this.txtRemoveWord.Name = "txtRemoveWord";
@@ -84,9 +104,12 @@
             // 
             // blacklistListView
             // 
+            this.blacklistListView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.blacklistListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.blacklistListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.offensiveWords});
-            this.blacklistListView.Font = new System.Drawing.Font("Tw Cen MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blacklistListView.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blacklistListView.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.blacklistListView.HideSelection = false;
             this.blacklistListView.Location = new System.Drawing.Point(8, 8);
             this.blacklistListView.MultiSelect = false;
@@ -94,18 +117,19 @@
             this.blacklistListView.Size = new System.Drawing.Size(175, 400);
             this.blacklistListView.TabIndex = 5;
             this.blacklistListView.UseCompatibleStateImageBehavior = false;
-            this.blacklistListView.View = System.Windows.Forms.View.List;
+            this.blacklistListView.View = System.Windows.Forms.View.SmallIcon;
             this.blacklistListView.SelectedIndexChanged += new System.EventHandler(this.blacklistListView_SelectedIndexChanged);
             // 
             // offensiveWords
             // 
             this.offensiveWords.Text = "Offensive Words";
-            this.offensiveWords.Width = 150;
+            this.offensiveWords.Width = 175;
             // 
             // BlacklistControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtAddWord);
             this.Controls.Add(this.btnRemoveWord);

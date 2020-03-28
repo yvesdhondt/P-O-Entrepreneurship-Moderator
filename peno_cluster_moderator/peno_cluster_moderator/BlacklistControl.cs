@@ -22,12 +22,17 @@ namespace peno_cluster_moderator
 
         public void InsertBlacklist(List<string> blacklist)
         {
-            // Set the list view to detail-mode
-            blacklistListView.View = View.Details;
             // Add the blacklist to the list view, duplicates are only shown once
-            foreach (string word in blacklist.Distinct())
+            if (blacklist != null)
             {
-                blacklistListView.Items.Add(new ListViewItem(new string[] { word }));
+                // Clear the old values
+                blacklistListView.Items.Clear();
+
+                // Replace them with the new values
+                foreach (string word in blacklist.Distinct())
+                {
+                    blacklistListView.Items.Add(new ListViewItem(new string[] { word }));
+                }
             }
             // Add some styling
             blacklistListView.GridLines = true;

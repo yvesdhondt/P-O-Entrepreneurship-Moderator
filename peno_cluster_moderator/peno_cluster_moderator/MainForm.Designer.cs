@@ -162,11 +162,11 @@
             // 
             // blacklistControl
             // 
+            this.blacklistControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.blacklistControl.Location = new System.Drawing.Point(210, 0);
             this.blacklistControl.Name = "blacklistControl";
             this.blacklistControl.Size = new System.Drawing.Size(870, 580);
             this.blacklistControl.TabIndex = 6;
-            this.blacklistControl.TabStop = false;
             this.blacklistControl.Visible = false;
             // 
             // MainForm
