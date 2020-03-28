@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +56,13 @@
       <DependentUpon>BlacklistControl.cs</DependentUpon>
     </Compile>
     <Compile Include="BlackListListener.cs" />
+    <Compile Include="BlockedListener.cs" />
+    <Compile Include="BlockedUsersControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BlockedUsersControl.Designer.cs">
+      <DependentUpon>BlockedUsersControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClusterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,6 +77,7 @@
     </Compile>
     <Compile Include="ClusterModeratorPanel.cs" />
     <Compile Include="IBlackListListener.cs" />
+    <Compile Include="IBlockedListener.cs" />
     <Compile Include="IModeratorPanel.cs" />
     <Compile Include="IReportListener.cs" />
     <Compile Include="IUpdateListener.cs" />
@@ -87,6 +98,9 @@
     <Compile Include="ReportListener.cs" />
     <EmbeddedResource Include="BlacklistControl.resx">
       <DependentUpon>BlacklistControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BlockedUsersControl.resx">
+      <DependentUpon>BlockedUsersControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClusterControl.resx">
       <DependentUpon>ClusterControl.cs</DependentUpon>
@@ -112,6 +126,7 @@
     <EmbeddedResource Include="ReportedQAControl.resx">
       <DependentUpon>ReportedQAControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

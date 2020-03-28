@@ -63,7 +63,7 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Show the full answer and question pair in their textboxes
+        /// Show the full answer and question pair in their textboxes.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -78,20 +78,29 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Check whether the ID is in the listview and if so, fill in the answer and question textboxes
+        /// Check whether the ID is in the listview and if so, fill in the answer and question textboxes. If the ID is not in the listview, the
+        /// answer and question textboxes are cleared.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void txtID_TextChanged(object sender, EventArgs e)
         {
+            bool isInView = false;
             foreach (ListViewItem item in reportedListView.Items)
             {
                 if (item.SubItems[0].Text == txtID.Text)
                 {
                     txtAnswer.Text = item.SubItems[2].Text;
                     txtQuestion.Text = item.SubItems[1].Text;
+                    isInView = true;
                     break;
                 }
+            }
+
+            if (!isInView)
+            {
+                txtAnswer.Clear();
+                txtQuestion.Clear();
             }
         }
 

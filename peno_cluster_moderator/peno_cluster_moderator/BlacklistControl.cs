@@ -20,6 +20,23 @@ namespace peno_cluster_moderator
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Override the pressed keys so that the "update" button is clicked when the
+        /// "enter" key is pressed.
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <param name="keyData"></param>
+        /// <returns></returns>
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                btnUpdate.PerformClick();
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
         public void InsertBlacklist(List<string> blacklist)
         {
             // Add the blacklist to the list view, duplicates are only shown once
@@ -113,20 +130,37 @@ namespace peno_cluster_moderator
                 listener.AddEvent(addedWord);
             }
 
-            // Add the word to the listview if it is not already in it
-            bool inListView = false;
-            foreach (ListViewItem item in this.blacklistListView.Items)
+            // Add the word to the listview if it is not already in it and it is not empty
+            if (!string.IsNullOrEmpty(addedWord))
             {
-                if (item.Text == addedWord)
+                bool inListView = false;
+                foreach (ListViewItem item in this.blacklistListView.Items)
                 {
-                    inListView = true;
-                    break;
+                    if (item.Text == addedWord)
+                    {
+                        inListView = true;
+                        break;
+                    }
+                }
+                if (!inListView)
+                {
+                    this.blacklistListView.Items.Add(new ListViewItem(new string[] { addedWord }));
                 }
             }
-            if (!inListView)
-            {
-                this.blacklistListView.Items.Add(new ListViewItem(new string[] { addedWord }));
-            }
+        }
+
+        /// <summary>
+        /// Remove and add, respectively, the words in the "remove" and "add" textboxes from the
+        /// listview and notify the listeners. After doing that, the textboxes are cleared.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            this.btnRemoveWord_Click(sender, e);
+            this.btnAdd_Click(sender, e);
+            this.txtRemoveWord.Clear();
+            this.txtAddWord.Clear();
         }
 
         private void txtRemoveWord_TextChanged(object sender, EventArgs e)

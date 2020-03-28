@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnReportedQA = new System.Windows.Forms.Button();
             this.btnBlacklist = new System.Windows.Forms.Button();
-            this.btnFlaggedQA = new System.Windows.Forms.Button();
             this.btnBlockedUsers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pnlProfilePicture = new System.Windows.Forms.Panel();
             this.blacklistControl = new peno_cluster_moderator.BlacklistControl();
             this.reportedQAControl = new peno_cluster_moderator.ReportedQAControl();
+            this.blockedUsersControl = new peno_cluster_moderator.BlockedUsersControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,27 +83,6 @@
             this.btnBlacklist.UseVisualStyleBackColor = false;
             this.btnBlacklist.Click += new System.EventHandler(this.btnBlacklist_Click);
             // 
-            // btnFlaggedQA
-            // 
-            this.btnFlaggedQA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
-            this.btnFlaggedQA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFlaggedQA.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnFlaggedQA.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnFlaggedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnFlaggedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.btnFlaggedQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFlaggedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnFlaggedQA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnFlaggedQA.Location = new System.Drawing.Point(0, 102);
-            this.btnFlaggedQA.Name = "btnFlaggedQA";
-            this.btnFlaggedQA.Size = new System.Drawing.Size(210, 28);
-            this.btnFlaggedQA.TabIndex = 3;
-            this.btnFlaggedQA.TabStop = false;
-            this.btnFlaggedQA.Text = "Flagged Q&&A";
-            this.btnFlaggedQA.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFlaggedQA.UseVisualStyleBackColor = false;
-            this.btnFlaggedQA.Click += new System.EventHandler(this.btnFlaggedQA_Click);
-            // 
             // btnBlockedUsers
             // 
             this.btnBlockedUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))), ((int)(((byte)(21)))));
@@ -115,7 +94,7 @@
             this.btnBlockedUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBlockedUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnBlockedUsers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 128);
+            this.btnBlockedUsers.Location = new System.Drawing.Point(0, 102);
             this.btnBlockedUsers.Name = "btnBlockedUsers";
             this.btnBlockedUsers.Size = new System.Drawing.Size(210, 28);
             this.btnBlockedUsers.TabIndex = 4;
@@ -127,16 +106,15 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Controls.Add(this.pnlProfilePicture);
             this.panel1.Controls.Add(this.btnBlacklist);
             this.panel1.Controls.Add(this.btnReportedQA);
             this.panel1.Controls.Add(this.btnBlockedUsers);
-            this.panel1.Controls.Add(this.btnFlaggedQA);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 580);
+            this.panel1.Size = new System.Drawing.Size(210, 1080);
             this.panel1.TabIndex = 5;
             // 
             // lblUserName
@@ -166,9 +144,8 @@
             this.blacklistControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.blacklistControl.Location = new System.Drawing.Point(210, 0);
             this.blacklistControl.Name = "blacklistControl";
-            this.blacklistControl.Size = new System.Drawing.Size(870, 580);
+            this.blacklistControl.Size = new System.Drawing.Size(1720, 1080);
             this.blacklistControl.TabIndex = 6;
-            this.blacklistControl.TabStop = false;
             this.blacklistControl.Visible = false;
             // 
             // reportedQAControl
@@ -176,10 +153,18 @@
             this.reportedQAControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
             this.reportedQAControl.Location = new System.Drawing.Point(210, 0);
             this.reportedQAControl.Name = "reportedQAControl";
-            this.reportedQAControl.Size = new System.Drawing.Size(870, 580);
+            this.reportedQAControl.Size = new System.Drawing.Size(1720, 1080);
             this.reportedQAControl.TabIndex = 7;
-            this.reportedQAControl.TabStop = false;
             this.reportedQAControl.Visible = false;
+            // 
+            // blockedUsersControl
+            // 
+            this.blockedUsersControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.blockedUsersControl.Location = new System.Drawing.Point(210, 0);
+            this.blockedUsersControl.Name = "blockedUsersControl";
+            this.blockedUsersControl.Size = new System.Drawing.Size(1720, 1080);
+            this.blockedUsersControl.TabIndex = 8;
+            this.blockedUsersControl.Visible = false;
             // 
             // MainForm
             // 
@@ -188,13 +173,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 571);
-            this.Controls.Add(this.reportedQAControl);
             this.Controls.Add(this.blacklistControl);
+            this.Controls.Add(this.reportedQAControl);
+            this.Controls.Add(this.blockedUsersControl);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Cluster Moderator Panel";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -207,12 +192,12 @@
         #endregion
         private System.Windows.Forms.Button btnReportedQA;
         private System.Windows.Forms.Button btnBlacklist;
-        private System.Windows.Forms.Button btnFlaggedQA;
         private System.Windows.Forms.Button btnBlockedUsers;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlProfilePicture;
         private System.Windows.Forms.Label lblUserName;
         private BlacklistControl blacklistControl;
         private ReportedQAControl reportedQAControl;
+        private BlockedUsersControl blockedUsersControl;
     }
 }
