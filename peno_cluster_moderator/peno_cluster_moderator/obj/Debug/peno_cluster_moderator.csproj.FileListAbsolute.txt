@@ -35,3 +35,8 @@ C:\Users\yvesd\Documents\AIPractice\P-O-Entrepreneurship-Moderator\peno_cluster_
 C:\Users\yvesd\Documents\AIPractice\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.exe
 C:\Users\yvesd\Documents\AIPractice\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.pdb
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.BlacklistControl.resources
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\bin\Debug\en-BE\peno_cluster_moderator.resources.dll
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.MainForm.en-BE.resources
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\en-BE\peno_cluster_moderator.resources.dll
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.ClusterControl.resources
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.ReportedQAControl.resources

@@ -63,9 +63,8 @@
             this.txtAddWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddWord.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtAddWord.Location = new System.Drawing.Point(311, 42);
-            this.txtAddWord.Multiline = true;
             this.txtAddWord.Name = "txtAddWord";
-            this.txtAddWord.Size = new System.Drawing.Size(473, 28);
+            this.txtAddWord.Size = new System.Drawing.Size(473, 25);
             this.txtAddWord.TabIndex = 8;
             this.txtAddWord.TextChanged += new System.EventHandler(this.txtAddWord_TextChanged);
             // 
@@ -96,9 +95,8 @@
             this.txtRemoveWord.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemoveWord.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtRemoveWord.Location = new System.Drawing.Point(311, 8);
-            this.txtRemoveWord.Multiline = true;
             this.txtRemoveWord.Name = "txtRemoveWord";
-            this.txtRemoveWord.Size = new System.Drawing.Size(473, 28);
+            this.txtRemoveWord.Size = new System.Drawing.Size(473, 25);
             this.txtRemoveWord.TabIndex = 6;
             this.txtRemoveWord.TextChanged += new System.EventHandler(this.txtRemoveWord_TextChanged);
             // 

@@ -37,6 +37,7 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.pnlProfilePicture = new System.Windows.Forms.Panel();
             this.blacklistControl = new peno_cluster_moderator.BlacklistControl();
+            this.reportedQAControl = new peno_cluster_moderator.ReportedQAControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.btnReportedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnReportedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnReportedQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnReportedQA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReportedQA.Location = new System.Drawing.Point(0, 76);
             this.btnReportedQA.Name = "btnReportedQA";
@@ -70,7 +71,7 @@
             this.btnBlacklist.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlacklist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlacklist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlacklist.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlacklist.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnBlacklist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBlacklist.Location = new System.Drawing.Point(0, 50);
             this.btnBlacklist.Name = "btnBlacklist";
@@ -91,7 +92,7 @@
             this.btnFlaggedQA.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnFlaggedQA.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnFlaggedQA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFlaggedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlaggedQA.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnFlaggedQA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnFlaggedQA.Location = new System.Drawing.Point(0, 102);
             this.btnFlaggedQA.Name = "btnFlaggedQA";
@@ -112,7 +113,7 @@
             this.btnBlockedUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlockedUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.btnBlockedUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBlockedUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBlockedUsers.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.btnBlockedUsers.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBlockedUsers.Location = new System.Drawing.Point(0, 128);
             this.btnBlockedUsers.Name = "btnBlockedUsers";
@@ -142,7 +143,7 @@
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblUserName.Location = new System.Drawing.Point(49, 12);
             this.lblUserName.Name = "lblUserName";
@@ -167,7 +168,18 @@
             this.blacklistControl.Name = "blacklistControl";
             this.blacklistControl.Size = new System.Drawing.Size(870, 580);
             this.blacklistControl.TabIndex = 6;
+            this.blacklistControl.TabStop = false;
             this.blacklistControl.Visible = false;
+            // 
+            // reportedQAControl
+            // 
+            this.reportedQAControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))), ((int)(((byte)(19)))));
+            this.reportedQAControl.Location = new System.Drawing.Point(210, 0);
+            this.reportedQAControl.Name = "reportedQAControl";
+            this.reportedQAControl.Size = new System.Drawing.Size(870, 580);
+            this.reportedQAControl.TabIndex = 7;
+            this.reportedQAControl.TabStop = false;
+            this.reportedQAControl.Visible = false;
             // 
             // MainForm
             // 
@@ -176,6 +188,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 571);
+            this.Controls.Add(this.reportedQAControl);
             this.Controls.Add(this.blacklistControl);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Panel pnlProfilePicture;
         private System.Windows.Forms.Label lblUserName;
         private BlacklistControl blacklistControl;
+        private ReportedQAControl reportedQAControl;
     }
 }

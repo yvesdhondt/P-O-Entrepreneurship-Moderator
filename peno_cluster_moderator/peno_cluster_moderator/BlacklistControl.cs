@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
-    public partial class BlacklistControl : UserControl
+    public partial class BlacklistControl : ClusterControl
     {
         private readonly List<IBlackListListener> BlackListListeners =
             new List<IBlackListListener>();
