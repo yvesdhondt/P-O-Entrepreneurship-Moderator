@@ -21,8 +21,13 @@ namespace peno_cluster_moderator
         public MainForm(IModeratorPanel moderatorPanel)
         {
             InitializeComponent();
+            // Set the moderator panel
             this.ModeratorPanel = moderatorPanel;
+            // Add the blacklist to the blacklistControl panel
+            this.blacklistControl.InsertBlacklist(this.ModeratorPanel.GetBlackList());
+            // Create a listener for the blacklistControl panel and add it to the control
             this.BlackListListener = new BlackListListener(moderatorPanel);
+            this.blacklistControl.AddListener(this.BlackListListener);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -31,39 +36,30 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Clicking on the Blacklist button pops-up a new window with the black list
+        /// Switch the visibility of the blacklist control. If the control is visible, also fetch the most up-to-date blacklist from the
+        /// moderator panel.
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBlacklist_Click(object sender, EventArgs e)
         {
-            BlacklistClusterForm blacklistForm = new BlacklistClusterForm(ModeratorPanel.GetBlackList(), this);
-            blacklistForm.AddListener(BlackListListener);
-            // Show the new form and hide this form
-            blacklistForm.Show();
-            this.Hide();
+            this.blacklistControl.Visible = ! this.blacklistControl.Visible;
+            if (this.blacklistControl.Visible)
+            {
+                this.blacklistControl.InsertBlacklist(this.ModeratorPanel.GetBlackList());
+            }
         }
 
         private void btnReportedQA_Click(object sender, EventArgs e)
         {
-            ReportedClusterForm reportedForm = new ReportedClusterForm(this);
-            // Show the new form and hide this form
-            reportedForm.Show();
-            this.Hide();
         }
 
         private void btnFlaggedQA_Click(object sender, EventArgs e)
         {
-            FlaggedClusterForm flaggedForm = new FlaggedClusterForm(this);
-            // Show the new form and hide this form
-            flaggedForm.Show();
-            this.Hide();
         }
 
         private void btnBlockedUsers_Click(object sender, EventArgs e)
         {
-            BlockedClusterForm blockedForm = new BlockedClusterForm(this);
-            // Show the new form and hide this form
-            blockedForm.Show();
-            this.Hide();
         }
     }
 }

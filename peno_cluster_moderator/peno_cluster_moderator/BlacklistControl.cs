@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,22 +10,19 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
-    /// <summary>
-    /// A class displaying the blacklist for the moderator.
-    /// </summary>
-    public partial class BlacklistClusterForm : ClusterForm
+    public partial class BlacklistControl : UserControl
     {
         private readonly List<IBlackListListener> BlackListListeners =
             new List<IBlackListListener>();
 
-        public BlacklistClusterForm(List<string> blacklist, ClusterForm creator)
+        public BlacklistControl()
         {
             InitializeComponent();
+        }
 
-            // Set the creator
-            this.Creator = creator;
-
-            // Get the list view
+        public void InsertBlacklist(List<string> blacklist)
+        {
+            // Set the list view to detail-mode
             blacklistListView.View = View.Details;
             // Add the blacklist to the list view, duplicates are only shown once
             foreach (string word in blacklist.Distinct())
@@ -34,16 +31,6 @@ namespace peno_cluster_moderator
             }
             // Add some styling
             blacklistListView.GridLines = true;
-        }
-
-        private void BlacklistClusterForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BlacklistClusterForm_FormClosing(Object sender, FormClosingEventArgs e)
-        {
-            base.ShowCreator();
         }
 
         /// <summary>
@@ -69,7 +56,7 @@ namespace peno_cluster_moderator
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void blacklistListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (blacklistListView.SelectedItems.Count > 0)
             {
@@ -104,6 +91,12 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Add the word in the txtAddWord box to the blacklistListView, as long as it is not already in the view.
+        /// Also notify all the IBlacklistListeners that a word was removed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Get the word in the "add" textbox
@@ -125,10 +118,20 @@ namespace peno_cluster_moderator
                     break;
                 }
             }
-            if (! inListView)
+            if (!inListView)
             {
                 this.blacklistListView.Items.Add(new ListViewItem(new string[] { addedWord }));
             }
+        }
+
+        private void txtRemoveWord_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddWord_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

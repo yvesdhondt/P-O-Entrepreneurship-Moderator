@@ -34,8 +34,9 @@
             this.btnFlaggedQA = new System.Windows.Forms.Button();
             this.btnBlockedUsers = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlProfilePicture = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
+            this.pnlProfilePicture = new System.Windows.Forms.Panel();
+            this.blacklistControl = new peno_cluster_moderator.BlacklistControl();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,16 +138,6 @@
             this.panel1.Size = new System.Drawing.Size(210, 580);
             this.panel1.TabIndex = 5;
             // 
-            // pnlProfilePicture
-            // 
-            this.pnlProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlProfilePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlProfilePicture.BackgroundImage")));
-            this.pnlProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pnlProfilePicture.Location = new System.Drawing.Point(3, 3);
-            this.pnlProfilePicture.Name = "pnlProfilePicture";
-            this.pnlProfilePicture.Size = new System.Drawing.Size(44, 47);
-            this.pnlProfilePicture.TabIndex = 6;
-            // 
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
@@ -159,6 +150,25 @@
             this.lblUserName.TabIndex = 6;
             this.lblUserName.Text = "Hans Adminson";
             // 
+            // pnlProfilePicture
+            // 
+            this.pnlProfilePicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlProfilePicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlProfilePicture.BackgroundImage")));
+            this.pnlProfilePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pnlProfilePicture.Location = new System.Drawing.Point(3, 3);
+            this.pnlProfilePicture.Name = "pnlProfilePicture";
+            this.pnlProfilePicture.Size = new System.Drawing.Size(44, 47);
+            this.pnlProfilePicture.TabIndex = 6;
+            // 
+            // blacklistControl
+            // 
+            this.blacklistControl.Location = new System.Drawing.Point(210, 0);
+            this.blacklistControl.Name = "blacklistControl";
+            this.blacklistControl.Size = new System.Drawing.Size(870, 580);
+            this.blacklistControl.TabIndex = 6;
+            this.blacklistControl.TabStop = false;
+            this.blacklistControl.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +176,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 571);
+            this.Controls.Add(this.blacklistControl);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -188,5 +199,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlProfilePicture;
         private System.Windows.Forms.Label lblUserName;
+        private BlacklistControl blacklistControl;
     }
 }
