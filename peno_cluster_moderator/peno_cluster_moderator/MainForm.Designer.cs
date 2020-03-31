@@ -32,13 +32,13 @@
             this.btnReportedQA = new System.Windows.Forms.Button();
             this.btnBlacklist = new System.Windows.Forms.Button();
             this.btnBlockedUsers = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlSummary = new System.Windows.Forms.Panel();
             this.lblUserName = new System.Windows.Forms.Label();
             this.pnlProfilePicture = new System.Windows.Forms.Panel();
             this.blacklistControl = new peno_cluster_moderator.BlacklistControl();
             this.reportedQAControl = new peno_cluster_moderator.ReportedQAControl();
             this.blockedUsersControl = new peno_cluster_moderator.BlockedUsersControl();
-            this.panel1.SuspendLayout();
+            this.pnlSummary.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReportedQA
@@ -104,18 +104,18 @@
             this.btnBlockedUsers.UseVisualStyleBackColor = false;
             this.btnBlockedUsers.Click += new System.EventHandler(this.btnBlockedUsers_Click);
             // 
-            // panel1
+            // pnlSummary
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.lblUserName);
-            this.panel1.Controls.Add(this.pnlProfilePicture);
-            this.panel1.Controls.Add(this.btnBlacklist);
-            this.panel1.Controls.Add(this.btnReportedQA);
-            this.panel1.Controls.Add(this.btnBlockedUsers);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 1080);
-            this.panel1.TabIndex = 5;
+            this.pnlSummary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.pnlSummary.Controls.Add(this.lblUserName);
+            this.pnlSummary.Controls.Add(this.pnlProfilePicture);
+            this.pnlSummary.Controls.Add(this.btnBlacklist);
+            this.pnlSummary.Controls.Add(this.btnReportedQA);
+            this.pnlSummary.Controls.Add(this.btnBlockedUsers);
+            this.pnlSummary.Location = new System.Drawing.Point(0, 0);
+            this.pnlSummary.Name = "pnlSummary";
+            this.pnlSummary.Size = new System.Drawing.Size(210, 1080);
+            this.pnlSummary.TabIndex = 5;
             // 
             // lblUserName
             // 
@@ -176,15 +176,15 @@
             this.Controls.Add(this.blacklistControl);
             this.Controls.Add(this.reportedQAControl);
             this.Controls.Add(this.blockedUsersControl);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSummary);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.Text = "Cluster Moderator Panel";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlSummary.ResumeLayout(false);
+            this.pnlSummary.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -193,7 +193,7 @@
         private System.Windows.Forms.Button btnReportedQA;
         private System.Windows.Forms.Button btnBlacklist;
         private System.Windows.Forms.Button btnBlockedUsers;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlSummary;
         private System.Windows.Forms.Panel pnlProfilePicture;
         private System.Windows.Forms.Label lblUserName;
         private BlacklistControl blacklistControl;

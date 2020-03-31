@@ -46,3 +46,4 @@ D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_modera
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.csproj.CopyComplete
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\bin\Debug\System.Data.SqlClient.dll
 D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\bin\Debug\System.Data.SqlClient.xml
+D:\Git\P-O-Entrepreneurship-Moderator\peno_cluster_moderator\peno_cluster_moderator\obj\Debug\peno_cluster_moderator.LoginForm.resources

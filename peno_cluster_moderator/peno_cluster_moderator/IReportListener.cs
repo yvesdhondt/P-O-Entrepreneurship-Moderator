@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
-    public interface IReportListener : IUpdateListener<List<string>>
+    public interface IReportListener : IUpdateListener<(string, string, string)>
     {
     }
 }

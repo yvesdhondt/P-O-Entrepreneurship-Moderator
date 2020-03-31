@@ -30,19 +30,19 @@ namespace peno_cluster_moderator
         /// Get a list of 3-tuples (id,question,answer) with all the reported QA-pairs.
         /// </summary>
         /// <returns>A list of 3-tuples (id,question,answer) with all the reported QA-pairs.</returns>
-        List<List<string>> GetReportedQA();
+        List<(string, string, string)> GetReportedQA();
 
         /// <summary>
         /// Decide that the QA-pair is safe.
         /// </summary>
         /// <param name="reportedQA">The QA-pair to mark as safe, a 3-tuple (id,question,answer).</param>
-        void SafeReportedQA(List<string> reportedQA);
+        void SafeReportedQA((string, string, string) reportedQA);
 
         /// <summary>
         /// Decide that the QA-pair is offensive.
         /// </summary>
         /// <param name="reportedQA">The QA-pair to mark as offensive, a 3-tuple (id,question,answer).</param>
-        void OffensiveReportedQA(List<string> reportedQ);
+        void OffensiveReportedQA((string, string, string) reportedQ);
 
         /// <summary>
         /// Get a list of 2-tuples (id,date) with all the blocked users.

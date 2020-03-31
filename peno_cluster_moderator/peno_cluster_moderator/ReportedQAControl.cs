@@ -24,7 +24,7 @@ namespace peno_cluster_moderator
         /// Fill the reported QA listview of this user control with some values.
         /// </summary>
         /// <param name="reportedQA">Some values.</param>
-        public void InsertReportedQA(List<List<String>> reportedQA)
+        public void InsertReportedQA(List<(string, string, string)> reportedQA)
         {
             // Add the reported QA to the list view, duplicates are only shown once
             if (reportedQA != null)
@@ -33,11 +33,11 @@ namespace peno_cluster_moderator
                 reportedListView.Items.Clear();
 
                 // Replace them with the new values
-                foreach (List<string> row in reportedQA)
+                foreach ((string, string, string) row in reportedQA)
                 {
                     reportedListView.Items.Add(
                         new ListViewItem(
-                            new string[] { row[0], row[1], row[2] }));
+                            new string[] { row.Item1, row.Item2, row.Item3 }));
                 }
             }
             // Add some styling
@@ -115,7 +115,7 @@ namespace peno_cluster_moderator
             string id = this.txtID.Text;
             string q = this.txtQuestion.Text;
             string ans = this.txtAnswer.Text;
-            List<string> msg = new List<string> { id, q, ans };
+            (string, string, string) msg = (id, q, ans);
 
             // Notify all the listeners
             foreach (IReportListener listener in this.ReportListeners)
@@ -145,7 +145,7 @@ namespace peno_cluster_moderator
             string id = this.txtID.Text;
             string q = this.txtQuestion.Text;
             string ans = this.txtAnswer.Text;
-            List<string> msg = new List<string> { id, q, ans };
+            (string, string, string) msg = (id, q, ans);
 
             // Notify all the listeners
             foreach (IReportListener listener in this.ReportListeners)

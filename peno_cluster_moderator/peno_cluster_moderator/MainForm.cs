@@ -20,9 +20,12 @@ namespace peno_cluster_moderator
         private IReportListener ReportListener { get; set; }
         private IBlockedListener BlockedListener { get; set; }
 
-        public MainForm(IModeratorPanel moderatorPanel)
+        public MainForm(IModeratorPanel moderatorPanel, string username)
         {
             InitializeComponent();
+            // Set the username
+            this.lblUserName.Text = username;
+
             // Set the moderator panel
             this.ModeratorPanel = moderatorPanel;
 

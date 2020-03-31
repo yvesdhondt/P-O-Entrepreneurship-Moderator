@@ -23,7 +23,7 @@ namespace peno_cluster_moderator
         /// Flag the given word (3-tuple (id,question,answer)) as offensive.
         /// </summary>
         /// <param name="word">The word to flag.</param>
-        public void AddEvent(List<string> word)
+        public void AddEvent((string, string, string) word)
         {
             this.ModeratorPanel.OffensiveReportedQA(word);
         }
@@ -32,7 +32,7 @@ namespace peno_cluster_moderator
         /// Flag the given word (3-tuple (id,question,answer)) as safe.
         /// </summary>
         /// <param name="word">The word to flag.</param>
-        public void RemoveEvent(List<string> word)
+        public void RemoveEvent((string, string, string) word)
         {
             this.ModeratorPanel.SafeReportedQA(word);
         }

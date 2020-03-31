@@ -63,17 +63,51 @@ namespace peno_cluster_moderator
             throw new NotImplementedException();
         }
 
-        public List<List<string>> GetReportedQA()
+        /// <summary>
+        /// Get the reported Q&A from Cluster.
+        /// </summary>
+        /// <returns>The reported Q&A from Cluster.</returns>
+        /// <exception cref="ApplicationException">There was an error while fetching the reported Q&A.</exception>
+        public List<(string,string,string)> GetReportedQA()
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("SELECT ba.author_user_id as id, q.question as question, a.answer as answer ");
+                    sb.Append("FROM BadAnswers ba, Answers a, Questions q ");
+                    sb.Append("WHERE ba.bad_answer_id = a.answer_id AND ba.question_id = q.question_id;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        List<(string, string, string)> reportedQA = new List<(string, string, string)>();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                reportedQA.Add((reader.GetString(0), reader.GetString(1), reader.GetString(2)));
+                            }
+                        }
+                        Console.WriteLine("Successfully Fetched the reported Q&A.");
+                        return reportedQA;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new ApplicationException(e.ToString());
+            }
+        }
+
+        public void SafeReportedQA((string, string, string) reportedQA)
         {
             throw new NotImplementedException();
         }
 
-        public void SafeReportedQA(List<string> reportedQA)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OffensiveReportedQA(List<string> reportedQ)
+        public void OffensiveReportedQA((string, string, string) reportedQ)
         {
             throw new NotImplementedException();
         }
