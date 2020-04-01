@@ -50,17 +50,95 @@ namespace peno_cluster_moderator
 
         public List<string> GetBlackList()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("SELECT bl.forbidden_word ");
+                    sb.Append("FROM Blacklist bl;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        List<string> blockedUsers = new List<string>();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                blockedUsers.Add(reader.GetString(0));
+                            }
+                        }
+                        Console.WriteLine("Successfully Fetched the blacklist.");
+                        return blockedUsers;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new ApplicationException(e.ToString());
+            }
         }
 
         public void AddWord(string word)
         {
-            throw new NotImplementedException();
+            // Do not add empty strings to the db
+            if (! string.IsNullOrEmpty(word))
+            {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append("INSERT INTO Blacklist (forbidden_word) ");
+                        sb.Append("VALUES (@word);");
+                        String sql = sb.ToString();
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            connection.Open();
+                            command.Parameters.AddWithValue("@word", word);
+                            command.ExecuteNonQuery();
+                            Console.WriteLine("Successfully added {0} to the blacklist.", word);
+                        }
+                    }
+                }
+                catch (SqlException e)
+                {
+                    throw new ApplicationException(e.ToString());
+                }
+            }
         }
 
         public void RemoveWord(string word)
         {
-            throw new NotImplementedException();
+            // Do not waste time removing empty words from the db.
+            if (!string.IsNullOrEmpty(word))
+            {
+                try
+                {
+                    using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                    {
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append("DELETE FROM Blacklist ");
+                        sb.Append("WHERE forbidden_word = @word;");
+                        String sql = sb.ToString();
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            connection.Open();
+                            command.Parameters.AddWithValue("@word", word);
+                            command.ExecuteNonQuery();
+                            Console.WriteLine("Successfully deleted {0} from the blacklist.", word);
+                        }
+                    }
+                }
+                catch (SqlException e)
+                {
+                    throw e;
+                }
+            }
         }
 
         /// <summary>
@@ -75,9 +153,9 @@ namespace peno_cluster_moderator
                 using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
                 {
                     StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT ba.author_user_id as id, q.question as question, a.answer as answer ");
-                    sb.Append("FROM BadAnswers ba, Answers a, Questions q ");
-                    sb.Append("WHERE ba.bad_answer_id = a.answer_id AND ba.question_id = q.question_id;");
+                    sb.Append("SELECT a.user_id as id, q.question as question, a.answer as answer ");
+                    sb.Append("FROM Answers a INNER JOIN Questions q ON a.answer_id = q.answer_id ");
+                    sb.Append("WHERE a.negative_feedback >= a.positive_feedback; ");
                     String sql = sb.ToString();
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -104,6 +182,13 @@ namespace peno_cluster_moderator
 
         public void SafeReportedQA((string, string, string) reportedQA)
         {
+            /////////////////
+            /////////////////
+            ///
+            /// I SHOULD INCLUDE BOTH THE QUESTION ID AND ANSWER ID (ALBEIT INVISIBLE) TO THE REPORTEDQA TO MAKE THE QUERIES FASTER.
+            /// 
+            /////////////////
+            /////////////////
             throw new NotImplementedException();
         }
 
@@ -114,17 +199,86 @@ namespace peno_cluster_moderator
 
         public List<(string, DateTime)> GetBlockedUsers()
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("SELECT bu.user_id as id, bu.blocked_date ");
+                    sb.Append("FROM BlockedUsers bu;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        List<(string, DateTime)> blockedUsers = new List<(string, DateTime)>();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                blockedUsers.Add((reader.GetInt32(0).ToString(), reader.GetDateTime(1)));
+                            }
+                        }
+                        Console.WriteLine("Successfully Fetched the blocked users.");
+                        return blockedUsers;
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new ApplicationException(e.ToString());
+            }
         }
 
         public void BlockUser(string userId, DateTime date)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("INSERT INTO BlockedUsers (user_id, blocked_date) ");
+                    sb.AppendFormat("VALUES ('{0}', '{1}');", userId, date);
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully blocked user {0}.", userId);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new ApplicationException(e.ToString());
+            }
         }
 
         public void UnblockUser(string userId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("DELETE FROM BlockedUsers ");
+                    sb.Append("WHERE user_id = @userId;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@userId", userId);
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully unblocked user {0}.", userId);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
         }
     }
 }

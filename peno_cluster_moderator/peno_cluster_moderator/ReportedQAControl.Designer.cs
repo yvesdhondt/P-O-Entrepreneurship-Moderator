@@ -57,7 +57,7 @@
             this.btnSafe.Name = "btnSafe";
             this.btnSafe.Size = new System.Drawing.Size(116, 28);
             this.btnSafe.TabIndex = 5;
-            this.btnSafe.Text = "Safe";
+            this.btnSafe.Text = "Good";
             this.btnSafe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSafe.UseVisualStyleBackColor = false;
             this.btnSafe.Click += new System.EventHandler(this.btnSafe_Click);
@@ -77,7 +77,7 @@
             this.btnOffensive.Name = "btnOffensive";
             this.btnOffensive.Size = new System.Drawing.Size(116, 28);
             this.btnOffensive.TabIndex = 4;
-            this.btnOffensive.Text = "Offensive";
+            this.btnOffensive.Text = "Bad";
             this.btnOffensive.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOffensive.UseVisualStyleBackColor = false;
             this.btnOffensive.Click += new System.EventHandler(this.btnOffensive_Click);
