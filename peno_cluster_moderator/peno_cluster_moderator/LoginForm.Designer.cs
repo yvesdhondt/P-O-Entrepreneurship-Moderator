@@ -52,8 +52,9 @@
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 610);
+            this.panel1.Size = new System.Drawing.Size(818, 1173);
             this.panel1.TabIndex = 6;
             // 
             // lblErrorMsg
@@ -62,9 +63,10 @@
             this.lblErrorMsg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblErrorMsg.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lblErrorMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblErrorMsg.Location = new System.Drawing.Point(21, 159);
+            this.lblErrorMsg.Location = new System.Drawing.Point(42, 306);
+            this.lblErrorMsg.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblErrorMsg.Name = "lblErrorMsg";
-            this.lblErrorMsg.Size = new System.Drawing.Size(282, 30);
+            this.lblErrorMsg.Size = new System.Drawing.Size(582, 64);
             this.lblErrorMsg.TabIndex = 29;
             this.lblErrorMsg.Text = "The given username and/or password was incorrect.\r\nPlease try again.";
             this.lblErrorMsg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,9 +78,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(42, 115);
+            this.label1.Location = new System.Drawing.Point(84, 221);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(241, 37);
+            this.label1.Size = new System.Drawing.Size(481, 72);
             this.label1.TabIndex = 28;
             this.label1.Text = "Cluster Moderator";
             // 
@@ -87,9 +90,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel2.BackgroundImage = global::peno_cluster_moderator.Properties.Resources.companyAssistant;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Location = new System.Drawing.Point(24, 23);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 100);
+            this.panel2.Size = new System.Drawing.Size(600, 192);
             this.panel2.TabIndex = 27;
             // 
             // lblPassword
@@ -98,9 +102,10 @@
             this.lblPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPassword.Location = new System.Drawing.Point(8, 246);
+            this.lblPassword.Location = new System.Drawing.Point(16, 473);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(79, 21);
+            this.lblPassword.Size = new System.Drawing.Size(157, 45);
             this.lblPassword.TabIndex = 26;
             this.lblPassword.Text = "Password";
             // 
@@ -116,9 +121,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(12, 311);
+            this.btnLogin.Location = new System.Drawing.Point(24, 598);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(300, 37);
+            this.btnLogin.Size = new System.Drawing.Size(600, 71);
             this.btnLogin.TabIndex = 23;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -130,9 +136,10 @@
             this.lblUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsername.Location = new System.Drawing.Point(8, 194);
+            this.lblUsername.Location = new System.Drawing.Point(16, 373);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(83, 21);
+            this.lblUsername.Size = new System.Drawing.Size(167, 45);
             this.lblUsername.TabIndex = 24;
             this.lblUsername.Text = "Username";
             // 
@@ -142,10 +149,11 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtPassword.Location = new System.Drawing.Point(12, 270);
+            this.txtPassword.Location = new System.Drawing.Point(24, 519);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(300, 25);
+            this.txtPassword.Size = new System.Drawing.Size(598, 42);
             this.txtPassword.TabIndex = 22;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -155,18 +163,22 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtUsername.Location = new System.Drawing.Point(12, 218);
+            this.txtUsername.Location = new System.Drawing.Point(24, 419);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(300, 25);
+            this.txtUsername.Size = new System.Drawing.Size(598, 42);
             this.txtUsername.TabIndex = 21;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // LoginForm
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(324, 365);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.ClientSize = new System.Drawing.Size(648, 702);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(12, 12, 12, 12);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.Text = "Cluster Moderator Login";
             this.panel1.ResumeLayout(false);
