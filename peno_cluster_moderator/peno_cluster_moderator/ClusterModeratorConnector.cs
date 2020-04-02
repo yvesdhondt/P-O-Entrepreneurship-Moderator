@@ -152,10 +152,11 @@ namespace peno_cluster_moderator
             {
                 using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
                 {
+                    // Get all the answers with more negative feedback than positive feedback that haven't been approved.
                     StringBuilder sb = new StringBuilder();
                     sb.Append("SELECT a.user_id as id, q.question as question, a.answer as answer ");
                     sb.Append("FROM Answers a INNER JOIN Questions q ON a.answer_id = q.answer_id ");
-                    sb.Append("WHERE a.negative_feedback >= a.positive_feedback; ");
+                    sb.Append("WHERE a.negative_feedback >= a.positive_feedback AND a.approved = 0; ");
                     String sql = sb.ToString();
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -166,7 +167,7 @@ namespace peno_cluster_moderator
                         {
                             while (reader.Read())
                             {
-                                reportedQA.Add((reader.GetString(0), reader.GetString(1), reader.GetString(2)));
+                                reportedQA.Add((reader.GetInt32(0).ToString(), reader.GetString(1), reader.GetString(2)));
                             }
                         }
                         Console.WriteLine("Successfully Fetched the reported Q&A.");
@@ -182,19 +183,156 @@ namespace peno_cluster_moderator
 
         public void SafeReportedQA((string, string, string) reportedQA)
         {
-            /////////////////
-            /////////////////
-            ///
-            /// I SHOULD INCLUDE BOTH THE QUESTION ID AND ANSWER ID (ALBEIT INVISIBLE) TO THE REPORTEDQA TO MAKE THE QUERIES FASTER.
-            /// 
-            /////////////////
-            /////////////////
-            throw new NotImplementedException();
+            try
+            {
+                string userId = reportedQA.Item1;
+                string question = reportedQA.Item2;
+                string ans = reportedQA.Item3;
+
+                Int32 qId;
+                Int32 aId;
+
+                // Get the question and answer ids from the db.
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("SELECT question_id, answer_id ");
+                    sb.Append("FROM Questions ");
+                    sb.Append("WHERE question = @question; ");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@question", question);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            reader.Read();
+                            qId = reader.GetInt32(0);
+                            aId = reader.GetInt32(1);
+                        }
+                        Console.WriteLine("Successfully Fetched the reported Q&A ids.");
+                    }
+                }
+
+                // Approve the answer
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("UPDATE Answers ");
+                    sb.Append("SET approved = 1, last_moderated = @now ");
+                    sb.Append("WHERE answer_id = @aid;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@now", DateTime.Now);
+                        command.Parameters.AddWithValue("@aid", aId);
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully approved {0}.", ans);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw new ApplicationException(e.ToString());
+            }
         }
 
-        public void OffensiveReportedQA((string, string, string) reportedQ)
+        public void OffensiveReportedQA((string, string, string) reportedQA)
         {
-            throw new NotImplementedException();
+            string userId = reportedQA.Item1;
+            string question = reportedQA.Item2;
+            string ans = reportedQA.Item3;
+
+            Int32 qId;
+            Int32 aId;
+
+            try
+            {
+                // Get the question and answer ids from the db.
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("SELECT question_id, answer_id ");
+                    sb.Append("FROM Questions ");
+                    sb.Append("WHERE question = @question; ");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@question", question);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            reader.Read();
+                            qId = reader.GetInt32(0);
+                            aId = reader.GetInt32(1);
+                        }
+                        Console.WriteLine("Successfully Fetched the reported Q&A ids.");
+                    }
+                }
+
+                // Remove the bad answer from the list of questions.
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("UPDATE Questions ");
+                    sb.Append("SET answer_id = NULL ");
+                    sb.Append("WHERE question_id = @qid;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@qid", qId);
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully removed the answer from {0}.", question);
+                    }
+                }
+
+                // Remove the bad answer from the list of answers.
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("DELETE FROM Answers ");
+                    sb.Append("WHERE answer_id = @aid;");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@aid", aId);
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully removed {0} from the good answers.", ans);
+                    }
+                }
+
+                // Remember the bad answer.
+                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
+                {
+                    StringBuilder sb = new StringBuilder();
+                    sb.Append("INSERT INTO BadAnswers ");
+                    sb.Append("VALUES (@aid, @ans, @qid, @userid);");
+                    String sql = sb.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        connection.Open();
+                        command.Parameters.AddWithValue("@aid", aId);
+                        command.Parameters.AddWithValue("@ans", ans);
+                        command.Parameters.AddWithValue("@qid", qId);
+                        command.Parameters.AddWithValue("@userid", userId);
+                        command.ExecuteNonQuery();
+                        Console.WriteLine("Successfully added {0} to the bad answers.", ans);
+                    }
+                }
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
         }
 
         public List<(string, DateTime)> GetBlockedUsers()
@@ -232,18 +370,25 @@ namespace peno_cluster_moderator
 
         public void BlockUser(string userId, DateTime date)
         {
+            if (string.IsNullOrEmpty(userId) || date == null)
+            {
+                return;
+            }
+
             try
             {
                 using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.Append("INSERT INTO BlockedUsers (user_id, blocked_date) ");
-                    sb.AppendFormat("VALUES ('{0}', '{1}');", userId, date);
+                    sb.Append("VALUES (@uid, @date);");
                     String sql = sb.ToString();
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         connection.Open();
+                        command.Parameters.AddWithValue("@uid", userId);
+                        command.Parameters.AddWithValue("@date", date);
                         command.ExecuteNonQuery();
                         Console.WriteLine("Successfully blocked user {0}.", userId);
                     }
