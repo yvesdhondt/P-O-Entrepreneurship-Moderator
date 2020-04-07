@@ -156,7 +156,7 @@ namespace peno_cluster_moderator
                     StringBuilder sb = new StringBuilder();
                     sb.Append("SELECT a.user_id as id, q.question as question, a.answer as answer ");
                     sb.Append("FROM Answers a INNER JOIN Questions q ON a.answer_id = q.answer_id ");
-                    sb.Append("WHERE a.negative_feedback >= a.positive_feedback AND a.approved = 0; ");
+                    sb.Append("WHERE a.negative_feedback > a.positive_feedback AND a.approved = 0; ");
                     String sql = sb.ToString();
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -195,15 +195,16 @@ namespace peno_cluster_moderator
                 // Get the question and answer ids from the db.
                 using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
                 {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT question_id, answer_id ");
-                    sb.Append("FROM Questions ");
-                    sb.Append("WHERE question = @question; ");
-                    String sql = sb.ToString();
+                    connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    StringBuilder sb1 = new StringBuilder();
+                    sb1.Append("SELECT question_id, answer_id ");
+                    sb1.Append("FROM Questions ");
+                    sb1.Append("WHERE question = @question; ");
+                    String sql1 = sb1.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql1, connection))
                     {
-                        connection.Open();
                         command.Parameters.AddWithValue("@question", question);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -213,20 +214,16 @@ namespace peno_cluster_moderator
                         }
                         Console.WriteLine("Successfully Fetched the reported Q&A ids.");
                     }
-                }
 
                 // Approve the answer
-                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("UPDATE Answers ");
-                    sb.Append("SET approved = 1, last_moderated = @now ");
-                    sb.Append("WHERE answer_id = @aid;");
-                    String sql = sb.ToString();
+                    StringBuilder sb2 = new StringBuilder();
+                    sb2.Append("UPDATE Answers ");
+                    sb2.Append("SET approved = 1, last_moderated = @now ");
+                    sb2.Append("WHERE answer_id = @aid;");
+                    String sql2 = sb2.ToString();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand command = new SqlCommand(sql2, connection))
                     {
-                        connection.Open();
                         command.Parameters.AddWithValue("@now", DateTime.Now);
                         command.Parameters.AddWithValue("@aid", aId);
                         command.ExecuteNonQuery();
@@ -254,15 +251,16 @@ namespace peno_cluster_moderator
                 // Get the question and answer ids from the db.
                 using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
                 {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("SELECT question_id, answer_id ");
-                    sb.Append("FROM Questions ");
-                    sb.Append("WHERE question = @question; ");
-                    String sql = sb.ToString();
+                    connection.Open();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    StringBuilder sb1 = new StringBuilder();
+                    sb1.Append("SELECT question_id, answer_id ");
+                    sb1.Append("FROM Questions ");
+                    sb1.Append("WHERE question = @question; ");
+                    String sql1 = sb1.ToString();
+
+                    using (SqlCommand command = new SqlCommand(sql1, connection))
                     {
-                        connection.Open();
                         command.Parameters.AddWithValue("@question", question);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -272,55 +270,39 @@ namespace peno_cluster_moderator
                         }
                         Console.WriteLine("Successfully Fetched the reported Q&A ids.");
                     }
-                }
-
                 // Remove the bad answer from the list of questions.
-                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("UPDATE Questions ");
-                    sb.Append("SET answer_id = NULL ");
-                    sb.Append("WHERE question_id = @qid;");
-                    String sql = sb.ToString();
+                    StringBuilder sb2 = new StringBuilder();
+                    sb2.Append("UPDATE Questions ");
+                    sb2.Append("SET answer_id = NULL ");
+                    sb2.Append("WHERE question_id = @qid;");
+                    String sql2 = sb2.ToString();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand command = new SqlCommand(sql2, connection))
                     {
-                        connection.Open();
                         command.Parameters.AddWithValue("@qid", qId);
                         command.ExecuteNonQuery();
                         Console.WriteLine("Successfully removed the answer from {0}.", question);
                     }
-                }
-
                 // Remove the bad answer from the list of answers.
-                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("DELETE FROM Answers ");
-                    sb.Append("WHERE answer_id = @aid;");
-                    String sql = sb.ToString();
+                    StringBuilder sb3 = new StringBuilder();
+                    sb3.Append("DELETE FROM Answers ");
+                    sb3.Append("WHERE answer_id = @aid;");
+                    String sql3 = sb3.ToString();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand command = new SqlCommand(sql3, connection))
                     {
-                        connection.Open();
                         command.Parameters.AddWithValue("@aid", aId);
                         command.ExecuteNonQuery();
                         Console.WriteLine("Successfully removed {0} from the good answers.", ans);
                     }
-                }
-
                 // Remember the bad answer.
-                using (SqlConnection connection = new SqlConnection(this.ClusterConnection))
-                {
-                    StringBuilder sb = new StringBuilder();
-                    sb.Append("INSERT INTO BadAnswers ");
-                    sb.Append("VALUES (@aid, @ans, @qid, @userid);");
-                    String sql = sb.ToString();
+                    StringBuilder sb4 = new StringBuilder();
+                    sb4.Append("INSERT INTO BadAnswers ");
+                    sb4.Append("VALUES (@ans, @qid, @userid);");
+                    String sql4 = sb4.ToString();
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand command = new SqlCommand(sql4, connection))
                     {
-                        connection.Open();
-                        command.Parameters.AddWithValue("@aid", aId);
                         command.Parameters.AddWithValue("@ans", ans);
                         command.Parameters.AddWithValue("@qid", qId);
                         command.Parameters.AddWithValue("@userid", userId);
