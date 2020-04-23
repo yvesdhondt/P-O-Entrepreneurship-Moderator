@@ -167,7 +167,7 @@ namespace peno_cluster_moderator
                         {
                             while (reader.Read())
                             {
-                                reportedQA.Add((reader.GetInt32(0).ToString(), reader.GetString(1), reader.GetString(2)));
+                                reportedQA.Add((reader.GetString(0), reader.GetString(1), reader.GetString(2)));
                             }
                         }
                         Console.WriteLine("Successfully Fetched the reported Q&A.");
@@ -336,7 +336,7 @@ namespace peno_cluster_moderator
                         {
                             while (reader.Read())
                             {
-                                blockedUsers.Add((reader.GetInt32(0).ToString(), reader.GetDateTime(1)));
+                                blockedUsers.Add((reader.GetString(0), reader.GetDateTime(1)));
                             }
                         }
                         Console.WriteLine("Successfully Fetched the blocked users.");
