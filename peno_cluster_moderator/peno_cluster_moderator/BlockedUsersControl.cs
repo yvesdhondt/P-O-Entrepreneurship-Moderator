@@ -8,13 +8,25 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A BlockedUsersControl is a ClusterControl used to display and modify the blocked users.
+    /// </summary>
     public partial class BlockedUsersControl : peno_cluster_moderator.ClusterControl
     {
+        /// <summary>
+        /// A list of listeners to notify when an event happens on this control.
+        /// </summary>
         private readonly List<IBlockedListener> blockedListeners =
             new List<IBlockedListener>();
 
+        /// <summary>
+        /// A list of listeners to notify when an event happens on this control.
+        /// </summary>
         private List<IBlockedListener> BlockedListeners => blockedListeners;
 
+        /// <summary>
+        /// Create a new blocked users control to display blocked users.
+        /// </summary>
         public BlockedUsersControl()
         {
             InitializeComponent();

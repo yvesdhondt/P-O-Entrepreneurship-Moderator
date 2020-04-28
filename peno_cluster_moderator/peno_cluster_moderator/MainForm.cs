@@ -20,6 +20,11 @@ namespace peno_cluster_moderator
         private IReportListener ReportListener { get; set; }
         private IBlockedListener BlockedListener { get; set; }
 
+        /// <summary>
+        /// Create a new MainForm. This is the actual GUI moderator panel that is accessed after the user logged in.
+        /// </summary>
+        /// <param name="moderatorPanel">The interface to access the data stored remotely on cluster.</param>
+        /// <param name="username">The username of the user.</param>
         public MainForm(IModeratorPanel moderatorPanel, string username)
         {
             InitializeComponent();

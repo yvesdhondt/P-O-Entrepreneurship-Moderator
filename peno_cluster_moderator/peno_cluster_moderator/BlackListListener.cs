@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A BlackListListener is used to modify a moderator panel when it is notified of an event.
+    /// </summary>
     class BlackListListener : peno_cluster_moderator.IBlackListListener
     {
+        /// <summary>
+        /// The moderator pannel to modify.
+        /// </summary>
         private IModeratorPanel ModeratorPanel { get; set; }
 
         /// <summary>

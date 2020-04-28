@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// The class that starts up the moderator panel.
+    /// </summary>
     static class Program
     {
         /// <summary>

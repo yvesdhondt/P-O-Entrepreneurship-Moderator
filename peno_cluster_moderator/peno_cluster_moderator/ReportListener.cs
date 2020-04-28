@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A listener used to notify an event onto a collection of reported Q&As.
+    /// </summary>
     public class ReportListener : IReportListener
     {
+        /// <summary>
+        /// The moderator panel used to access the remote data stored on Cluster.
+        /// </summary>
         private IModeratorPanel ModeratorPanel { get; set; }
 
         /// <summary>

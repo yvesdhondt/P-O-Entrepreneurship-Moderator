@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A BlockedListener is used to modify a moderator panel when it is notified of an event.
+    /// </summary>
     public class BlockedListener : IBlockedListener
     {
+        /// <summary>
+        /// The moderator panel to modify.
+        /// </summary>
         private IModeratorPanel ModeratorPanel { get; set; }
 
         /// <summary>

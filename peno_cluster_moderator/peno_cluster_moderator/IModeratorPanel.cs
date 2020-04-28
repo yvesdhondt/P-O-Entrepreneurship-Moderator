@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// An IModeratorPanel is a collection of events that can happen on the cluster moderator. It can be used by either a GUI or command-line moderator panel to modify the data stored in Cluster.
+    /// </summary>
     public interface IModeratorPanel
     {
         /// <summary>

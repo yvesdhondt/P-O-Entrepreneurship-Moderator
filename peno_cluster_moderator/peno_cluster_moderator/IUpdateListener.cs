@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A standard listener interface (used in a listener-subscriber pattern) used to update some collection stored at a remote location.
+    /// </summary>
+    /// <typeparam name="T">The type of object stored, or mapped onto an item, in the collection.</typeparam>
     public interface IUpdateListener<T>
     {
         /// <summary>

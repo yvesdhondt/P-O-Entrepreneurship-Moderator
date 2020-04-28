@@ -8,8 +8,14 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A login form is used to verify the credentials of a user of the moderator panel, and is the main entry point to the application.
+    /// </summary>
     public partial class LoginForm : peno_cluster_moderator.ClusterForm
     {
+        /// <summary>
+        /// Create a login form.
+        /// </summary>
         public LoginForm()
         {
             InitializeComponent();
@@ -39,13 +45,19 @@ namespace peno_cluster_moderator
             }
         }
 
-        // Hide the error msg when the user enters a new username.
+        /// <summary>
+        /// Hide the error msg when the user enters a new username.
+        /// </summary>
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
             lblErrorMsg.Hide();
         }
 
-        // Hide the error msg when the user enters a new password.
+        /// <summary>
+        /// Hide the error msg when the user enters a new password.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             lblErrorMsg.Hide();

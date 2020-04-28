@@ -8,16 +8,28 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A ReportedQAControl is a ClusterControl used to display and modify the reported Q&As.
+    /// </summary>
     public partial class ReportedQAControl : peno_cluster_moderator.ClusterControl
     {
+        /// <summary>
+        /// The listeners to this ReportedQAControl.
+        /// </summary>
         private readonly List<IReportListener> reportListeners =
             new List<IReportListener>();
 
+        /// <summary>
+        /// Create a new ReportedQAControl.
+        /// </summary>
         public ReportedQAControl()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The listeners to this ReportedQAControl.
+        /// </summary>
         private List<IReportListener> ReportListeners => reportListeners;
 
         /// <summary>

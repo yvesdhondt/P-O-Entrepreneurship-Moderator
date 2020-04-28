@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A cluster form is a form with some formatting applied to it.
+    /// </summary>
     public partial class ClusterForm : Form
     {
+        /// <summary>
+        /// Create a new clusterform.
+        /// </summary>
         public ClusterForm()
         {
             InitializeComponent();

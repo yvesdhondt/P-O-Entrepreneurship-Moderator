@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace peno_cluster_moderator
 {
+    /// <summary>
+    /// A BlacklistControl is a ClusterControl used to display and modify the blacklist.
+    /// </summary>
     public partial class BlacklistControl : ClusterControl
     {
+        /// <summary>
+        /// The listeners to this blacklist.
+        /// </summary>
         private readonly List<IBlackListListener> BlackListListeners =
             new List<IBlackListListener>();
 
+        /// <summary>
+        /// Create a new blacklist.
+        /// </summary>
         public BlacklistControl()
         {
             InitializeComponent();
@@ -37,6 +46,10 @@ namespace peno_cluster_moderator
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        /// <summary>
+        /// Display a new blacklist onto this GUI user control. If it is null, nothing happens.
+        /// </summary>
+        /// <param name="blacklist">The blacklist to display.</param>
         public void InsertBlacklist(List<string> blacklist)
         {
             // Add the blacklist to the list view, duplicates are only shown once

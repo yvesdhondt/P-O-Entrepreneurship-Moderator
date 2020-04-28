@@ -48,6 +48,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Get all the words in the blacklist.
+        /// </summary>
+        /// <returns>A list of words in the blacklist. These words may contain spaces.</returns>
         public List<string> GetBlackList()
         {
             try
@@ -81,6 +85,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Add a word to the blacklist. If the word is null or empty, nothing will happen.
+        /// </summary>
+        /// <param name="word">The word to add to the blacklist, this word may contain spaces.</param>
         public void AddWord(string word)
         {
             // Do not add empty strings to the db
@@ -111,6 +119,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Remove a word from the blacklist. If the word is null or empty, nothing will happen.
+        /// </summary>
+        /// <param name="word">The word to remove from the blacklist, this word may contain spaces.</param>
         public void RemoveWord(string word)
         {
             // Do not waste time removing empty words from the db.
@@ -181,6 +193,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Classify the given Q&A tuple as safe.
+        /// </summary>
+        /// <param name="reportedQA">A 3-tuple consisting of the user id, the question, and the answer.</param>
         public void SafeReportedQA((string, string, string) reportedQA)
         {
             try
@@ -237,6 +253,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Classify the given Q&A tuple as offensive.
+        /// </summary>
+        /// <param name="reportedQA">A 3-tuple consisting of the user id, the question, and the answer.</param>
         public void OffensiveReportedQA((string, string, string) reportedQA)
         {
             string userId = reportedQA.Item1;
@@ -317,6 +337,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Get all the blocked users.
+        /// </summary>
+        /// <returns>A list of blocked users.</returns>
         public List<(string, DateTime)> GetBlockedUsers()
         {
             try
@@ -350,6 +374,11 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Block a user. If one of the params is null or empty, nothing happens.
+        /// </summary>
+        /// <param name="userId">The user to block.</param>
+        /// <param name="date">The time at which the user was blocked.</param>
         public void BlockUser(string userId, DateTime date)
         {
             if (string.IsNullOrEmpty(userId) || date == null)
@@ -382,6 +411,10 @@ namespace peno_cluster_moderator
             }
         }
 
+        /// <summary>
+        /// Unblock a user. If one of the params is null or empty, nothing happens.
+        /// </summary>
+        /// <param name="userId">The user to unblock.</param>
         public void UnblockUser(string userId)
         {
             try
