@@ -33,19 +33,19 @@ The external server application is hidden behind an interface called `IModerator
         /// Get a list of 3-tuples (id,question,answer) with all the reported QA-pairs.
         /// </summary>
         /// <returns>A list of 3-tuples (id,question,answer) with all the reported QA-pairs.</returns>
-        List<List<string>> GetReportedQA();
+        List<(string,string,string)> GetReportedQA();
 
         /// <summary>
         /// Decide that the QA-pair is safe.
         /// </summary>
         /// <param name="reportedQA">The QA-pair to mark as safe, a 3-tuple (id,question,answer).</param>
-        void SafeReportedQA(List<string> reportedQA);
+        void SafeReportedQA((string,string,string) reportedQA);
 
         /// <summary>
         /// Decide that the QA-pair is offensive.
         /// </summary>
         /// <param name="reportedQA">The QA-pair to mark as offensive, a 3-tuple (id,question,answer).</param>
-        void OffensiveReportedQA(List<string> reportedQ);
+        void OffensiveReportedQA((string,string,string) reportedQ);
 
         /// <summary>
         /// Get a list of 2-tuples (id,date) with all the blocked users.
@@ -88,8 +88,10 @@ Keep in mind that this is only a **conceptual** description of these tables. In 
 Unlike the NLP tools the `IModeratorPanel` implementation will directly communicate with the database, instead of using a `cluster.Connector`-like class. The user will be able to enter his/her username and password (the same usernames and passwords that have access to the database) to connect with the database. The `IModeratorPanel` will then connect to the database with the given username and password and send queries to fetch and update the information when necessary. The `IModeratorPanel` will be notified that it needs to fetch/update something by multiple _listeners_ that are activated when the user performs an action on the UI.
 
 ## Version Log
+### V1.0
+An implementation of the `IModeratorPanel` interface is created to work with the first release of the clusterbot.
 ### V0.2
-Time is moving fast! The moderator panel is now secure by use of usernames and passwords. The placeholder `IModeratorPanel` is gradually being replaced by a connector to the Cluster Forum.
+The moderator panel is now secure by use of usernames and passwords. The placeholder `IModeratorPanel` is gradually being replaced by a connector to the Cluster Forum.
 ### V0.1
 Fully implemented UI, connection to a placeholder `IModeratorPanel`.
 ### V0.0
