@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IModeratorPanel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IModeratorPanel
+   ">
+    <meta name="generator" content="docfx 2.52.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="peno_cluster_moderator.IModeratorPanel">
+  
+  
+  <h1 id="peno_cluster_moderator_IModeratorPanel" data-uid="peno_cluster_moderator.IModeratorPanel" class="text-break">Interface IModeratorPanel
+  </h1>
+  <div class="markdown level0 summary"><p>An IModeratorPanel is a collection of events that can happen on the cluster moderator. It can be used by either a GUI or command-line moderator panel to modify the data stored in Cluster.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="peno_cluster_moderator.html">peno_cluster_moderator</a></h6>
+  <h6><strong>Assembly</strong>: peno_cluster_moderator.dll</h6>
+  <h5 id="peno_cluster_moderator_IModeratorPanel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IModeratorPanel</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_AddWord_System_String_.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.AddWord(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L24">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_AddWord_" data-uid="peno_cluster_moderator.IModeratorPanel.AddWord*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_AddWord_System_String_" data-uid="peno_cluster_moderator.IModeratorPanel.AddWord(System.String)">AddWord(String)</h4>
+  <div class="markdown level1 summary"><p>Add the given word to the blacklisted words.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void AddWord(string word)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">word</span></td>
+        <td><p>The word to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_BlockUser_System_String_System_DateTime_.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.BlockUser(System.String%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L61">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_BlockUser_" data-uid="peno_cluster_moderator.IModeratorPanel.BlockUser*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_BlockUser_System_String_System_DateTime_" data-uid="peno_cluster_moderator.IModeratorPanel.BlockUser(System.String,System.DateTime)">BlockUser(String, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Block the user with the given id and remember the data at which he/she was blocked.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BlockUser(string userId, DateTime date)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">date</span></td>
+        <td><p>The time of blocking the user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_GetBlackList.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.GetBlackList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L18">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_GetBlackList_" data-uid="peno_cluster_moderator.IModeratorPanel.GetBlackList*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_GetBlackList" data-uid="peno_cluster_moderator.IModeratorPanel.GetBlackList">GetBlackList()</h4>
+  <div class="markdown level1 summary"><p>Get a list of strings with all the blacklisted words.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;string&gt; GetBlackList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><p>A list of all the blacklisted words.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_GetBlockedUsers.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.GetBlockedUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L54">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_GetBlockedUsers_" data-uid="peno_cluster_moderator.IModeratorPanel.GetBlockedUsers*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_GetBlockedUsers" data-uid="peno_cluster_moderator.IModeratorPanel.GetBlockedUsers">GetBlockedUsers()</h4>
+  <div class="markdown level1 summary"><p>Get a list of 2-tuples (id,date) with all the blocked users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;(string, DateTime)&gt; GetBlockedUsers()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.DateTime</span>&gt;&gt;</td>
+        <td><p>A list of 2-tuples (id,date) with all the blocked users.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_GetReportedQA.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.GetReportedQA%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L36">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_GetReportedQA_" data-uid="peno_cluster_moderator.IModeratorPanel.GetReportedQA*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_GetReportedQA" data-uid="peno_cluster_moderator.IModeratorPanel.GetReportedQA">GetReportedQA()</h4>
+  <div class="markdown level1 summary"><p>Get a list of 3-tuples (id,question,answer) with all the reported QA-pairs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">List&lt;(string, string, string)&gt; GetReportedQA()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;</td>
+        <td><p>A list of 3-tuples (id,question,answer) with all the reported QA-pairs.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_OffensiveReportedQA_System_ValueTuple_System_String_System_String_System_String__.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.OffensiveReportedQA(System.ValueTuple%7BSystem.String%2CSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L48">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_OffensiveReportedQA_" data-uid="peno_cluster_moderator.IModeratorPanel.OffensiveReportedQA*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_OffensiveReportedQA_System_ValueTuple_System_String_System_String_System_String__" data-uid="peno_cluster_moderator.IModeratorPanel.OffensiveReportedQA(System.ValueTuple{System.String,System.String,System.String})">OffensiveReportedQA((String, String, String))</h4>
+  <div class="markdown level1 summary"><p>Decide that the QA-pair is offensive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void OffensiveReportedQA((string, string, string) reportedQ)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">reportedQ</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_RemoveWord_System_String_.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.RemoveWord(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L30">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_RemoveWord_" data-uid="peno_cluster_moderator.IModeratorPanel.RemoveWord*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_RemoveWord_System_String_" data-uid="peno_cluster_moderator.IModeratorPanel.RemoveWord(System.String)">RemoveWord(String)</h4>
+  <div class="markdown level1 summary"><p>Remove the given word from the blacklisted words.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RemoveWord(string word)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">word</span></td>
+        <td><p>The word to remove from the blacklisted words.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_SafeReportedQA_System_ValueTuple_System_String_System_String_System_String__.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.SafeReportedQA(System.ValueTuple%7BSystem.String%2CSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L42">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_SafeReportedQA_" data-uid="peno_cluster_moderator.IModeratorPanel.SafeReportedQA*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_SafeReportedQA_System_ValueTuple_System_String_System_String_System_String__" data-uid="peno_cluster_moderator.IModeratorPanel.SafeReportedQA(System.ValueTuple{System.String,System.String,System.String})">SafeReportedQA((String, String, String))</h4>
+  <div class="markdown level1 summary"><p>Decide that the QA-pair is safe.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SafeReportedQA((string, string, string) reportedQA)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">reportedQA</span></td>
+        <td><p>The QA-pair to mark as safe, a 3-tuple (id,question,answer).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel_UnblockUser_System_String_.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel.UnblockUser(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L67">View Source</a>
+  </span>
+  <a id="peno_cluster_moderator_IModeratorPanel_UnblockUser_" data-uid="peno_cluster_moderator.IModeratorPanel.UnblockUser*"></a>
+  <h4 id="peno_cluster_moderator_IModeratorPanel_UnblockUser_System_String_" data-uid="peno_cluster_moderator.IModeratorPanel.UnblockUser(System.String)">UnblockUser(String)</h4>
+  <div class="markdown level1 summary"><p>Unblock the user with the given id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UnblockUser(string userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/new/master/apiSpec/new?filename=peno_cluster_moderator_IModeratorPanel.md&amp;value=---%0Auid%3A%20peno_cluster_moderator.IModeratorPanel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/yvesdhondt/P-O-Entrepreneurship-Moderator/blob/master/peno_cluster_moderator/peno_cluster_moderator/IModeratorPanel.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

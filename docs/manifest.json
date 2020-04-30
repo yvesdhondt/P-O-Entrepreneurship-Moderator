@@ -1,0 +1,320 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Git/P-O-Entrepreneurship-Moderator/peno_cluster_moderator/peno_cluster_moderator",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Eq4Jk6L3DU9939v2H+eXfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "qVew3bBkr34mGrB3FuMIDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "pp7u2YljY1CSCZqZRKPyOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.BlacklistControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.BlacklistControl.html",
+          "hash": "SRgZiE/Tv+o3EBkMvIJ+ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.BlockedListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.BlockedListener.html",
+          "hash": "t1M1DbNRa1GKWKY1kWYySg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.BlockedUsersControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.BlockedUsersControl.html",
+          "hash": "3YRm6/sWrvKkMTyBqokaew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.ClusterControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.ClusterControl.html",
+          "hash": "WjLyLIz08rBqZHQO/hl+8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.ClusterForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.ClusterForm.html",
+          "hash": "wFOGJ2YJU94xuMv+GXzs3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.ClusterModeratorConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.ClusterModeratorConnector.html",
+          "hash": "gD3e+2pmhCapH33+aB9iEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.IBlackListListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.IBlackListListener.html",
+          "hash": "5L9t6YTliD2+/PNFs73Vew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.IBlockedListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.IBlockedListener.html",
+          "hash": "iOr6B1oyVQLsMLBk+WNgMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.IModeratorPanel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.IModeratorPanel.html",
+          "hash": "8ksj/bHONa2kx7BJQCtPVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.IReportListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.IReportListener.html",
+          "hash": "7GOuF8+8m1kEzpTBrmcKgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.IUpdateListener-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.IUpdateListener-1.html",
+          "hash": "4c2yNX78bWcbwmvPB+Xs0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.LoginForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.LoginForm.html",
+          "hash": "WurtThqMEqndKYw0HAMMkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.MainForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.MainForm.html",
+          "hash": "fTwinpZrz+Nj0XkEPZLlTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.ReportListener.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.ReportListener.html",
+          "hash": "iToXAqIBHVR9wKU61qffGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.ReportedQAControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.ReportedQAControl.html",
+          "hash": "Q95SAIgNOKZtXjnvM7Id0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/peno_cluster_moderator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/peno_cluster_moderator.html",
+          "hash": "JlZlqt6X3FyoX5CHUYXwMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "ChVmY+ZWPxRisQ4O4cIS/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "G2AoE5T/2VarbHvzLEo4TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 16,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
