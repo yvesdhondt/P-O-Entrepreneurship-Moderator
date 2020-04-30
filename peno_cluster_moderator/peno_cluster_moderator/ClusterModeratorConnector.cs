@@ -154,10 +154,10 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Get the reported Q&A from Cluster.
+        /// Get the reported Q&amp;A from Cluster.
         /// </summary>
-        /// <returns>The reported Q&A from Cluster.</returns>
-        /// <exception cref="ApplicationException">There was an error while fetching the reported Q&A.</exception>
+        /// <returns>The reported Q&amp;A from Cluster.</returns>
+        /// <exception cref="ApplicationException">There was an error while fetching the reported Q&amp;A.</exception>
         public List<(string,string,string)> GetReportedQA()
         {
             try
@@ -182,7 +182,7 @@ namespace peno_cluster_moderator
                                 reportedQA.Add((reader.GetString(0), reader.GetString(1), reader.GetString(2)));
                             }
                         }
-                        Console.WriteLine("Successfully Fetched the reported Q&A.");
+                        Console.WriteLine("Successfully Fetched the reported Q&amp;A.");
                         return reportedQA;
                     }
                 }
@@ -194,7 +194,7 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Classify the given Q&A tuple as safe.
+        /// Classify the given Q&amp;A tuple as safe.
         /// </summary>
         /// <param name="reportedQA">A 3-tuple consisting of the user id, the question, and the answer.</param>
         public void SafeReportedQA((string, string, string) reportedQA)
@@ -228,7 +228,7 @@ namespace peno_cluster_moderator
                             qId = reader.GetInt32(0);
                             aId = reader.GetInt32(1);
                         }
-                        Console.WriteLine("Successfully Fetched the reported Q&A ids.");
+                        Console.WriteLine("Successfully Fetched the reported Q&amp;A ids.");
                     }
 
                 // Approve the answer
@@ -254,7 +254,7 @@ namespace peno_cluster_moderator
         }
 
         /// <summary>
-        /// Classify the given Q&A tuple as offensive.
+        /// Classify the given Q&amp;A tuple as offensive.
         /// </summary>
         /// <param name="reportedQA">A 3-tuple consisting of the user id, the question, and the answer.</param>
         public void OffensiveReportedQA((string, string, string) reportedQA)
@@ -288,7 +288,7 @@ namespace peno_cluster_moderator
                             qId = reader.GetInt32(0);
                             aId = reader.GetInt32(1);
                         }
-                        Console.WriteLine("Successfully Fetched the reported Q&A ids.");
+                        Console.WriteLine("Successfully Fetched the reported Q&amp;A ids.");
                     }
                 // Remove the bad answer from the list of questions.
                     StringBuilder sb2 = new StringBuilder();

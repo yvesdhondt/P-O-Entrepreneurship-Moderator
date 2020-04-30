@@ -12,7 +12,7 @@
           "hash": "Eq4Jk6L3DU9939v2H+eXfg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "qVew3bBkr34mGrB3FuMIDg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
           "hash": "pp7u2YljY1CSCZqZRKPyOQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -60,7 +60,7 @@
           "hash": "SRgZiE/Tv+o3EBkMvIJ+ow=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "t1M1DbNRa1GKWKY1kWYySg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -84,7 +84,7 @@
           "hash": "3YRm6/sWrvKkMTyBqokaew=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -108,7 +108,7 @@
           "hash": "wFOGJ2YJU94xuMv+GXzs3A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/peno_cluster_moderator.ClusterModeratorConnector.html",
-          "hash": "gD3e+2pmhCapH33+aB9iEg=="
+          "hash": "0NQ3bBw7ISf6JHA8L6xmlg=="
         }
       },
       "is_incremental": false,
@@ -132,7 +132,7 @@
           "hash": "5L9t6YTliD2+/PNFs73Vew=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -144,7 +144,7 @@
           "hash": "iOr6B1oyVQLsMLBk+WNgMg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "8ksj/bHONa2kx7BJQCtPVw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/peno_cluster_moderator.IReportListener.html",
-          "hash": "7GOuF8+8m1kEzpTBrmcKgQ=="
+          "hash": "cFXFGP6N6CweJUt46yuzNQ=="
         }
       },
       "is_incremental": false,
@@ -180,7 +180,7 @@
           "hash": "4c2yNX78bWcbwmvPB+Xs0Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -192,7 +192,7 @@
           "hash": "WurtThqMEqndKYw0HAMMkQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "fTwinpZrz+Nj0XkEPZLlTg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/peno_cluster_moderator.ReportListener.html",
-          "hash": "iToXAqIBHVR9wKU61qffGw=="
+          "hash": "elKn6ReREMJ73udlOg0/gQ=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/peno_cluster_moderator.ReportedQAControl.html",
-          "hash": "Q95SAIgNOKZtXjnvM7Id0w=="
+          "hash": "Ce6Yi/lw0K1BPT+M3wjRKw=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/peno_cluster_moderator.html",
-          "hash": "JlZlqt6X3FyoX5CHUYXwMg=="
+          "hash": "6ZJpBpgkE5Z1Eau0X2Iz0Q=="
         }
       },
       "is_incremental": false,
@@ -271,25 +271,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 16,
-          "skipped_file_count": 0
+          "skipped_file_count": 12
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -302,8 +300,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

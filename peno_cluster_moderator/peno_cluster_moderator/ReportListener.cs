@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace peno_cluster_moderator
 {
     /// <summary>
-    /// A listener used to notify an event onto a collection of reported Q&As.
+    /// A listener used to notify an event onto a collection of reported Q&amp;As.
     /// </summary>
     public class ReportListener : IReportListener
     {

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace peno_cluster_moderator
 {
     /// <summary>
-    /// A ReportedQAControl is a ClusterControl used to display and modify the reported Q&As.
+    /// A ReportedQAControl is a ClusterControl used to display and modify the reported Q&amp;As.
     /// </summary>
     public partial class ReportedQAControl : peno_cluster_moderator.ClusterControl
     {
