@@ -138,8 +138,7 @@ namespace peno_cluster_moderator
             // Remove the id,q,ans row from the list view
             foreach (ListViewItem item in this.reportedListView.Items)
             {
-                if (item.SubItems[0].Text == id && item.SubItems[1].Text == q &&
-                    item.SubItems[2].Text == ans)
+                if (item.SubItems[0].Text == id && item.SubItems[1].Text == q)
                 {
                     this.reportedListView.Items.Remove(item);
                 }
@@ -168,8 +167,7 @@ namespace peno_cluster_moderator
             // Remove the id,q,ans row from the list view
             foreach (ListViewItem item in this.reportedListView.Items)
             {
-                if (item.SubItems[0].Text == id && item.SubItems[1].Text == q &&
-                    item.SubItems[2].Text == ans)
+                if (item.SubItems[0].Text == id && item.SubItems[1].Text == q)
                 {
                     this.reportedListView.Items.Remove(item);
                 }

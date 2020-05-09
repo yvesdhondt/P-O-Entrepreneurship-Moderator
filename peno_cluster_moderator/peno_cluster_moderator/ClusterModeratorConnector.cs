@@ -234,7 +234,7 @@ namespace peno_cluster_moderator
                 // Approve the answer
                     StringBuilder sb2 = new StringBuilder();
                     sb2.Append("UPDATE Answers ");
-                    sb2.Append("SET approved = 1, last_moderated = @now ");
+                    sb2.Append("SET approved = 1, last_moderated = @now, answer = @answer ");
                     sb2.Append("WHERE answer_id = @aid;");
                     String sql2 = sb2.ToString();
 
@@ -242,6 +242,7 @@ namespace peno_cluster_moderator
                     {
                         command.Parameters.AddWithValue("@now", DateTime.Now);
                         command.Parameters.AddWithValue("@aid", aId);
+                        command.Parameters.AddWithValue("@answer", ans);
                         command.ExecuteNonQuery();
                         Console.WriteLine("Successfully approved {0}.", ans);
                     }

@@ -91,7 +91,6 @@
             this.txtAnswer.Location = new System.Drawing.Point(376, 190);
             this.txtAnswer.Multiline = true;
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.ReadOnly = true;
             this.txtAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAnswer.Size = new System.Drawing.Size(473, 91);
             this.txtAnswer.TabIndex = 3;
