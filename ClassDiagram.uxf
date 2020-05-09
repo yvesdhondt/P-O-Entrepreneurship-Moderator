@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>450</y>
+      <w>220</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IModeratorPanel
+--
+--
++ GetBlackList(): List&lt;string&gt;
++ AddWord(word: string): void
++ RemoveWord(word: string): void
++ GetReportedQA(): List&lt;(string, string, string)&gt;
++ SafeReportedQA(reportedQA: (string, string, string)): void
++ OffensiveReportedQA(reportedQ: (string, string, string)): void
++ GetBlockedUsers(): List&lt;(string, DateTime)&gt;
++ BlockUser(userId: string, date: DateTime): void
++ UnblockUser(userId: string): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>545</y>
+      <w>15</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>595</y>
+      <w>220</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>ClusterModeratorConnector
+--
+- ClusterConnection: string
+--
++ ClusterModeratorConnector(username: string, password: string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>375</x>
+      <y>185</y>
+      <w>120</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>template=T
+&lt;&lt;interface&gt;&gt;
+IUpdateListener
+--
+--
++ RemoveEvent(word: T): void
++ AddEvent(word: T): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>320</y>
+      <w>70</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IBlackListListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>290</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;bind&gt;&gt;
+T = string</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>235</y>
+      <w>45</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+&lt;&lt;bind&gt;&gt;
+T = string</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>395</x>
+      <y>320</y>
+      <w>70</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IBlockedListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>290</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;bind&gt;&gt;
+T = string</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0;160.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>320</y>
+      <w>70</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+IReportListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>375</y>
+      <w>70</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>BlackListListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>395</x>
+      <y>375</y>
+      <w>70</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>BlockedListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>470</x>
+      <y>375</y>
+      <w>70</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>ReportListener
+--
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>340</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>340</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>340</y>
+      <w>15</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>350</x>
+      <y>390</y>
+      <w>65</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=ModeratorPanel</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>390</y>
+      <w>65</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=ModeratorPanel</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>390</y>
+      <w>65</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=ModeratorPanel</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>265</x>
+      <y>140</y>
+      <w>335</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>ModeratorPanel
+bg=blue
+transparency=95</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>375</x>
+      <y>680</y>
+      <w>105</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>Cluster
+bg=green
+transparency=95</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>395</x>
+      <y>710</y>
+      <w>65</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>SQLServer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>425</x>
+      <y>625</y>
+      <w>15</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>610</x>
+      <y>675</y>
+      <w>215</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Cluster refers to the central Cluster system, e.g. the "server"
+that handles the requests from the chatbot and the NLP tools.
+this system uses a SQLServer to store questions, answers, and
+users. In the spirit of rapid prototyping a direct connection between
+the ModeratorPanel and this SQLServer was made, but in a real
+system, this direct connection should be replaced by function calls
+on an API provided by the central Cluster system. A so-called
+"connector" to the system.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>475</x>
+      <y>680</y>
+      <w>145</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.()
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>230</y>
+      <w>145</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=.()
+</panel_attributes>
+    <additional_attributes>270.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>615</x>
+      <y>225</y>
+      <w>215</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>This is a generic listener that listens to some "update" event. More
+specifically an action is taken when an item is added to or removed
+from a collection.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>615</x>
+      <y>400</y>
+      <w>215</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>These three listeners are used to make changes to the data
+displayed on some UI permanent in the database that stores the
+information. In our implementation, these three listeners subscribe
+to WinForms UserControls that display blocked users, blacklisted
+words, and reported Q&amp;As. Whenever the user changes something
+on this WinForms UI, the change is also made permanent in the
+database, by notifying these listeners.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>390</y>
+      <w>15</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.()
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>455</x>
+      <y>390</y>
+      <w>170</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.()
+</panel_attributes>
+    <additional_attributes>320.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>390</y>
+      <w>95</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=.()
+</panel_attributes>
+    <additional_attributes>170.0;50.0;10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
